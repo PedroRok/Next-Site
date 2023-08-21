@@ -2,26 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  opacity: 0;
+  background-color: #000000;
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@font-face {
+  font-family: 'Trip Sans Ultra';
+  src: url('../../public/fonts/TripSans-Ultra.eot');
+  src: local('Trip Sans Ultra'), local('TripSans-Ultra'),
+      url('../../public/fonts/TripSans-Ultra.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TripSans-Ultra.woff2') format('woff2'),
+      url('../../public/fonts/TripSans-Ultra.woff') format('woff'),
+      url('../../public/fonts/TripSans-Ultra.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trip Sans Bold';
+  src: url('../../public/fonts/TripSans-Bold.eot');
+  src: local('Trip Sans Bold'), local('TripSans-Bold'),
+      url('../../public/fonts/TripSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TripSans-Bold.woff2') format('woff2'),
+      url('../../public/fonts/TripSans-Bold.woff') format('woff'),
+      url('../../public/fonts/TripSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trip Sans';
+  src: url('../../public/fonts/TripSans-Medium.eot');
+  src: local('Trip Sans Medium'), local('TripSans-Medium'),
+      url('../../public/fonts/TripSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TripSans-Medium.woff2') format('woff2'),
+      url('../../public/fonts/TripSans-Medium.woff') format('woff'),
+      url('../../public/fonts/TripSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trip Sans Mono';
+  src: url('../../public/fonts/TripSansMono-Regular.eot');
+  src: local('Trip Sans Mono Regular'), local('TripSansMono-Regular'),
+      url('../../public/fonts/TripSansMono-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TripSansMono-Regular.woff2') format('woff2'),
+      url('../../public/fonts/TripSansMono-Regular.woff') format('woff'),
+      url('../../public/fonts/TripSansMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trip Sans';
+  src: url('../../public/fonts/TripSans-Regular.eot');
+  src: local('Trip Sans Regular'), local('TripSans-Regular'),
+      url('../../public/fonts/TripSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TripSans-Regular.woff2') format('woff2'),
+      url('../../public/fonts/TripSans-Regular.woff') format('woff'),
+      url('../../public/fonts/TripSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(0deg, #000000 0%, #131313 100%); /* #172749 #3061a5 */
+  z-index: -4;
+}
+
+.background::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/img/noise.png');
+  z-index: -3;
 }
