@@ -10,8 +10,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'my-blue': '#00d2ff',
+        'my-shadow-blue': '#00d2ff77',
+      },  
       dropShadow: {
         'glow': '0 0 var(--glowing, 8px) var(--glowing-color, rgba(255, 255, 255, 0.3))',
+        'glow-blue': '0 0 var(--glowing, 8px) #00d2ff77',
       },
       fontFamily: {
         'trip': ['Trip Sans', 'sans-serif'],

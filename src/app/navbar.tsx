@@ -12,8 +12,8 @@ export default function Navbar() {
   // group-hover:animate-fade-in-left animate-fade-out-left
   return (
     <nav className="flex justify-between w-full max-w-[900px] items-center p-3 animate-fade-in-down">
-      <div className="group font-trip tracking-widest inline-flex items-center text-[#00d2ff] p-2 mr-4 text-5xl opacity-90 font-[900] uppercase animate-fade-in-down">
-        <Link className="drop-shadow-glow [--glowing-color:#00d2ff77]" href="/">
+      <div className="group font-trip tracking-widest inline-flex items-center text-my-blue p-2 mr-4 text-5xl opacity-90 font-[900] uppercase animate-fade-in-down">
+        <Link className="drop-shadow-glow-blue" href="/">
           Rok
         </Link>
         <div className="transition-all ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[50%] overflow-hidden"> 

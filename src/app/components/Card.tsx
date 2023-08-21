@@ -10,10 +10,11 @@ export default function Card(props: { title: string; description: string; right:
     var transformHover = props.right ? `rotateY(-13deg) rotateX(5deg) rotate(1deg) scaleY(.9) scaleX(.95) translate(-3%) translateY(-3%)` : `rotateY(13deg) rotateX(5deg) rotate(-1deg) scaleY(.9) scaleX(.95) translate(3%) translateY(-3%)`
 
     const imgDiv = (
-        <div className="drop-shadow-glow hover:[--glowing:20px] transition-all duration-1000"
+        <div className="drop-shadow-glow hover:[--glowing:20px] transition-all duration-1000 cursor-pointer"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-        >
+            onMouseOver={() => setHover(true)}
+                    >
             <div className="relative min-w-[20rem] -max-w-[20rem] max-h-[11.5rem] border col-span-1 rounded-3xl" style={{
                 transform: `perspective(1000px) ${!hover ? transformHover : transformNeutral}`,
                 transition: "all 0.5s ease-in-out"
