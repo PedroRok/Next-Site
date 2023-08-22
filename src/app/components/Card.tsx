@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function Card(props: { title: string; description: string; right: boolean}) {
+export default function Card(props: { title: string; description: string; image: string, right: boolean}) {
 
     const [hover, setHover] = useState(false)
     const textAlign = !props.right ? "text-right" : "text-left";
@@ -19,7 +19,7 @@ export default function Card(props: { title: string; description: string; right:
                 transform: `perspective(1000px) ${!hover ? transformHover : transformNeutral}`,
                 transition: "all 0.5s ease-in-out"
             }}>
-                <img className="rounded-3xl p-1 max-h-[11.40rem]" src="https://picsum.photos/1920/1080" alt="teste"/>
+                <img className="rounded-3xl p-1 max-h-[11.40rem]" src={props.image} alt="teste"/>
             </div>
             
         </div>
