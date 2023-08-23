@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="w-full max-w-[900px]">
       <nav className="flex justify-between  items-center pt-3 animate-fade-in-down">
         <div className="group font-trip tracking-widest inline-flex items-center text-my-blue p-2 mr-4 text-5xl opacity-90 font-[900] uppercase animate-fade-in-down">
-          <img src = "img/logo.svg" alt="Rok" className="hover:cursor-pointer hover:scale-105 transition-all hover:[--glowing:10px] ease-in-out duration-1000 drop-shadow-glow-blue max-w-[6.5rem] fill-my-blue"/>
+          <img src = "img/logo.svg" alt="Rok" className="hover:cursor-pointer hover:scale-105 transition-all hover:[--glowing:1px] ease-in-out duration-1000 drop-shadow-glow-blue max-w-[6.5rem] fill-my-blue"/>
           <div className="transition-all ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[50%] overflow-hidden"> 
             PedroL.
           </div>
