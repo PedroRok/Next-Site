@@ -66,7 +66,8 @@ export default function Card(props: { title: string; description: string; image:
                         <div className={`font-trip min-w-[17rem] mt-2  ${usingWriter ? "max-h-[6rem]" : "max-h-[0rem]"} break-normal overflow-hidden hover:overflow-auto opacity-75 transition-all duration-[2s]`}>
                             {typewriter}
                         </div>
-                        {usingWriter ? <MyButton className={`mt-3 transition-all duration-500 ${showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"}`}/> : <span onClick={() => setUsingWriter(true)} className={`cursor-pointer transition-all duration-300 ${usingWriter ? "opacity-0" : "animate-pulse opacity-100"}`}>[...]</span>}
+                        {usingWriter ? <MyButton className={`mt-3 transition-all duration-500 ${showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"}`}/> : 
+                        <span onClick={() => setUsingWriter(true)} className={`cursor-pointer transition-all text-zinc-500 hover:tracking-wide hover:text-slate-50 duration-300 ${usingWriter ? "opacity-0" : "opacity-100"}`}>Ler mais...</span>}
                         
                     </div>
                     
