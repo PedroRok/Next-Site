@@ -1,9 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import MyButton from "./MyButton";
+import Typewriter from 'typewriter-effect';
 
 export default function Card(props: { title: string; description: string; image: string, right: boolean}) {
 
+
     const [hover, setHover] = useState(false)
+    const [showButton, setShowButton] = useState(false)
+
+    const [usingWriter, setUsingWriter] = useState(false)
+    const [typewriter, setTypeWriter] = useState(<></>)
+
+
+
+    useEffect(() => {
+        if (hover) {
+            setUsingWriter(true)
+          setTypeWriter(
+            <Typewriter 
+                onInit={(typewriter) => {
+                    typewriter
+                    .changeDelay(50)
+                    .typeString(props.description)
+                    .callFunction(() => {
+                    setShowButton(true)
+                    })
+                    if (hover) 
+                        typewriter.start();
+                    }}
+                />
+            )};
+      }, [hover]);
+
+
     const textAlign = !props.right ? "text-right" : "text-left";
 
     var transformNeutral = `rotateY(0deg) rotateX(0deg) rotate(0deg) scaleY(1) scaleX(1) translate(0%) translateY(0%)`
@@ -15,29 +45,31 @@ export default function Card(props: { title: string; description: string; image:
             onMouseLeave={() => setHover(false)}
             onMouseOver={() => setHover(true)}
                     >
-            <div className="relative min-w-[20rem] -max-w-[20rem] max-h-[11.5rem] border col-span-1 rounded-3xl" style={{
+            <div className="relative min-w-[20rem] -max-w-[20rem] max-h-[13.5rem] border col-span-1 rounded-3xl" style={{
                 transform: `perspective(1000px) ${!hover ? transformHover : transformNeutral}`,
                 transition: "all 0.5s ease-in-out"
             }}>
-                <img className="rounded-3xl p-1 max-h-[11.40rem]" src={props.image} alt="teste"/>
+                <img className="rounded-3xl p-1 max-h-[13.40rem]" src={props.image} alt="teste"/>
             </div>
             
         </div>
     )
 
     return (
-        <div className="text-center p-5">
+        <div className="text-center p-5 h-[16rem] max-h-[16rem]">
             <div className="grid grid-flow-col justify-between">
                 {!props.right ? imgDiv : null}
                 <div className="flex justify-end items-center m-5 max-h-[10.5rem]">
                     <div className={`text-cente ${textAlign}`}>
-                        <h2 className="font-trip">
+                        <h2 className="font-trip font-semibold tracking-wide ">
                             {props.title}
                         </h2>
-                        <span className="font-trip min-w-[20rem] break-normal overflow-auto max-h-[6em] hover:overflow-auto">
-                            {props.description}
-                        </span>
+                        <div className={`font-trip min-w-[17rem] mt-2  ${usingWriter ? "max-h-[6rem]" : "max-h-[0rem]"} break-normal overflow-hidden hover:overflow-auto opacity-75 transition-all duration-[2s]`}>
+                            {typewriter}
+                        </div>
+                        <MyButton className={`mt-2 transition-all duration-500 ${showButton ? "opacity-100" : "opacity-0"}`}/>
                     </div>
+                    
                 </div>
                 {props.right ? imgDiv : null}
             </div>
