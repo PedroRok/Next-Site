@@ -1,4 +1,4 @@
-import Card from "./components/Card";
+import Card from "@components/Card";
 
 export default function Projects() {
     return (
@@ -12,11 +12,11 @@ export default function Projects() {
           </h1>
           <div className="h-[3rem] w-[1px] bg-stone-50 mx-3 transition-all opacity-50 duration-700 scale-[0%] group-hover:scale-[100%]"></div>
         </div>
-        <Card title="Lorem Ipsum" image="https://picsum.photos/1920/1080" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias" right={true} />
-        <Card title="Lorem Ipsum" image="https://picsum.photos/1920/1081" description="lorem ipsum dolor sit amet" right={false} />
+        <Card title="Cool Project 1" image="https://picsum.photos/1920/1080" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias" right={true} />
+        <Card title="Youtuber Project" image="https://picsum.photos/1920/1081" description="lorem ipsum dolor sit amet" right={false} />
         <Card title="Lorem Ipsum" image="https://picsum.photos/1920/1082" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias" right={true} />
-        <Card title="Lorem Ipsum" image="https://picsum.photos/1920/1083" description="lorem ipsum dolor sit amet" right={false} />
-        <Card title="Lorem Ipsum" image="https://picsum.photos/1920/1084" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias" right={true} />
+        <Card title="Meu Site" image="https://picsum.photos/1920/1083" description="lorem ipsum dolor sit amet" right={false} />
+        <Card title="Python Bot" image="https://picsum.photos/1920/1084" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias" right={true} />
       </div>
     );
 }

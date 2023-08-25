@@ -67,7 +67,7 @@ export default function Card(props: { title: string; description: string; image:
                             {typewriter}
                         </div>
                         {usingWriter ? <MyButton className={`mt-3 transition-all duration-500 ${showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"}`}/> : 
-                        <span onClick={() => setUsingWriter(true)} className={`cursor-pointer transition-all text-zinc-500 hover:tracking-wide hover:text-slate-50 duration-300 ${usingWriter ? "opacity-0" : "opacity-100"}`}>Ler mais...</span>}
+                        <span onClick={() => setUsingWriter(true)} className={`cursor-pointer transition-all text-zinc-500 hover:tracking-wide hover:text-slate-50 duration-300 h-[1rem] ${usingWriter ? "opacity-0" : "opacity-100"}`}>Ler mais...</span>}
                         
                     </div>
                     

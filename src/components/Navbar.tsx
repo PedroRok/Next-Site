@@ -1,7 +1,6 @@
 "use client";
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { Url } from "next/dist/shared/lib/router/router";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
@@ -13,7 +12,7 @@ export default function Navbar() {
     <nav className="w-full max-w-[900px]">
       <nav className="flex justify-between  items-center pt-3 animate-fade-in-down">
         <div className="group font-trip tracking-widest inline-flex items-center text-my-blue p-2 mr-4 text-5xl opacity-90 font-[900] uppercase animate-fade-in-down">
-          <img src = "img/logo.svg" alt="Rok" className="hover:cursor-pointer hover:scale-105 transition-all hover:[--glowing:1px] ease-in-out duration-1000 drop-shadow-glow-blue max-w-[6.5rem] fill-my-blue"/>
+          <img src="/img/logo.svg" alt="Rok" className="hover:cursor-pointer hover:scale-105 transition-all hover:[--glowing:1px] ease-in-out duration-1000 drop-shadow-glow-blue max-w-[6.5rem] fill-my-blue"/>
           <div className="transition-all ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[50%] overflow-hidden"> 
             PedroL.
           </div>
@@ -50,7 +49,7 @@ export default function Navbar() {
               <NavButton name="Home" link="/" />
               <NavButton name="About" link="/" />
               <NavButton name="Contact" link="/" />
-              <NavButton name="Projects" link="/" />
+              <NavButton name="Projects" link="/prj" />
             </div>
           </div>
         </div>
@@ -60,15 +59,14 @@ export default function Navbar() {
   );
 }
 
-const NavButton = (props: { name: String; link: Url }) => {
+const NavButton = (props: { name: String; link: string }) => {
   return (
     <div className="group mt-5 hover:cursor-pointer">
       <Link
-        className="w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded text-white font-thin items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition duration-500 ease-in-out"
+        className="w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded text-white font-thin items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out"
         href={props.link}
       >
         {props.name}
-          
       </Link>
       <div className="transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto opacity-0 group-hover:opacity-100 rounded-lg bg-my-blue mt-5 drop-shadow-glow-blue [--glowing:20px] scale-0 group-hover:scale-[100%]"></div>
     </div>
