@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
+import clsx from "clsx";
 
-export default function Navbar() {
+export default function Navbar(props: any) {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -46,10 +48,10 @@ export default function Navbar() {
             lg:flex lg:flex-grow lg:w-full transition duration-500 ease-in-out animate-fade-in-down`}
           >
             <div className="lg:relative absolute lg:flex-row w-full lg:items-center items-start flex flex-col lg:h-full lg:gap-5 mr-5">
-              <NavButton name="Home" link="/" />
-              <NavButton name="About" link="/" />
-              <NavButton name="Contact" link="/" />
-              <NavButton name="Projects" link="/prj" />
+              <NavButton name="Home" link="/"/>
+              <NavButton name="About" link="/about"/>
+              <NavButton name="Contact" link="/contact"/>
+              <NavButton name="Projects" link="/projects"/>
             </div>
           </div>
         </div>
@@ -59,16 +61,18 @@ export default function Navbar() {
   );
 }
 
-const NavButton = (props: { name: String; link: string }) => {
+const NavButton = (props: { name: string; link: string }) => {
+  const path = usePathname();
   return (
-    <div className="group mt-5 hover:cursor-pointer">
+    <div 
+    className="group mt-5 hover:cursor-pointer">
       <Link
-        className="w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded text-white font-thin items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out"
+        className={clsx("w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded font-thin items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out", path === props.link ? "text-my-blue drop-shadow-glow-blue" : "text-white")}
         href={props.link}
       >
         {props.name}
       </Link>
-      <div className="transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto opacity-0 group-hover:opacity-100 rounded-lg bg-my-blue mt-5 drop-shadow-glow-blue [--glowing:20px] scale-0 group-hover:scale-[100%]"></div>
+      <div className={clsx("transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto rounded-lg bg-my-blue mt-5 drop-shadow-glow-blue [--glowing:20px] group-hover:opacity-100 group-hover:scale-[100%]", path === props.link ? "scale-[100%] opacity-100" : "scale-0 opacity-0")}></div>
     </div>
   );
 };
