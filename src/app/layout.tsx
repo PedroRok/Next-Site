@@ -19,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx("flex flex-col items-center min-h-screen background ", inter.className)}>
+      <body
+        className={clsx(
+          "flex flex-col items-center min-h-screen background select-none",
+          inter.className
+        )}
+      >
         <Navbar />
         <TWHelper />
         {children}
