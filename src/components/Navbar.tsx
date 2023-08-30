@@ -56,7 +56,7 @@ export default function Navbar(props: any) {
           </div>
         </div>
       </nav>
-      <div className="min-w-[20rem] min-h-[1px] bg-stone-50 opacity-50"></div>
+      <div className="min-w-[20rem] min-h-[1px] bg-stone-50 opacity-50"/>
     </nav>
   );
 }
@@ -72,7 +72,7 @@ const NavButton = (props: { name: string; link: string }) => {
       >
         {props.name}
       </Link>
-      <div className={clsx("transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto rounded-lg bg-my-blue mt-5 drop-shadow-glow-blue [--glowing:20px] group-hover:opacity-100 group-hover:scale-[100%]", path === props.link ? "scale-[100%] opacity-100" : "scale-0 opacity-0")}></div>
+      <div className={clsx("transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto rounded-lg bg-my-blue mt-5  [--glowing:20px] group-hover:opacity-100 group-hover:scale-[100%]", path === props.link ? "scale-[100%] opacity-100" : "drop-shadow-glow-blue scale-0 opacity-0")}/>
     </div>
   );
 };
