@@ -1,3 +1,5 @@
+import { Logo, LogoAnimated } from "@components/Logo";
+
 export default function Home() {
   return (
     <main className="w-full max-w-[850px]">
@@ -25,8 +27,11 @@ export default function Home() {
             <Lang name="..." />
           </div>
         </div>
-        <div className="h-[30rem] w-[20rem] bg-white"><img src="https://picsum.photos/1080/1620"/></div>
+        <div className="relative h-[30rem] w-[20rem]">
+          <LogoAnimated className="scale-150"/>
+        </div>
       </div>
+      <div className="min-h-[50rem]"></div>
     </main>
   );
 }
