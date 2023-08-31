@@ -22,10 +22,6 @@ export function Logo(props: {
       height={height * size} // 245
       viewBox={`0 0 ${width} ${height}`}
     >
-      <linearGradient id="grad" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00d2ff" />
-        <stop offset="100%" stop-color="#00d2ff00" />
-      </linearGradient>
       <g>
         <path
           fill={props.fill}
@@ -87,8 +83,8 @@ function VerticalLogo(props: { className?: string }) {
       viewBox="0 0 540 540"
     >
       <linearGradient id="grad" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00d2ff" />
-        <stop offset="100%" stop-color="#00d2ff00" />
+        <stop offset="0%" stopColor="#00d2ff" />
+        <stop offset="100%" stopColor="#00d2ff00" />
       </linearGradient>
       <path
         fill="url(#grad)"

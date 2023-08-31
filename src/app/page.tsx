@@ -1,6 +1,11 @@
+import Wakatime from "@/lib/Wakatime";
 import { Logo, LogoAnimated } from "@components/Logo";
 
 export default function Home() {
+
+  const wt = new Wakatime();
+  wt.importAllData();
+
   return (
     <main className="w-full max-w-[850px]">
       <div className=" flex justify-between mt-[5rem] place-items-center text-slate-50">
