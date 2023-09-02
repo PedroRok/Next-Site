@@ -1,5 +1,7 @@
+"use client";
 import Wakatime from "@/lib/Wakatime";
-import { Logo, LogoAnimated } from "@components/Logo";
+import { LogoAnimated } from "@components/Logo";
+import Carousel from "@components/Carousel";
 
 export default function Home() {
 
@@ -7,36 +9,46 @@ export default function Home() {
   wt.importAllData();
 
   return (
-    <main className="w-full max-w-[850px]">
-      <div className=" flex justify-between mt-[5rem] place-items-center text-slate-50">
-        <div className="flex-col max-w-[50%] m-5">
-          <h1>
-            Frase bonitinha <B>bem aqui </B>
-            obrigado
-          </h1>
-          <h2 className="p-1 pl-3 opacity-50 text-2xl font-sans">
-            Olá blablabla alguma frase bonitinha que eu trabalho com minecraft e
-            etecetera bem do dahora aqui tirar o bold da font tbm tmj
-          </h2>
-          <div className="mt-4">
-            <Lang name="Java" />
-            <Lang name="JavaScript" />
-            <Lang name="TypeScript" />
-            <Lang name="Python" />
-            <Lang name="Next" />
-            <Lang name="React" />
-            <Lang name="Tailwind" />
-            <Lang name="HTML" />
-            <Lang name="CSS" />
-            <Lang name="C Lang" />
-            <Lang name="..." />
+    <main className="">
+      <div className="max-w-[850px]">
+        <div className="flex justify-between mt-5 place-items-center text-slate-50">
+          <div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
+            <h1>
+              Frase bonitinha <B>bem aqui </B>
+              obrigado
+            </h1>
+            <h2 className="p-1 pl-3 font-sans text-2xl opacity-50">
+              Olá blablabla alguma frase bonitinha que eu trabalho com minecraft e
+              etecetera bem do dahora aqui tirar o bold da font tbm tmj
+            </h2>
+            <div className="mt-4">
+              <Lang name="Java" />
+              <Lang name="JavaScript" />
+              <Lang name="TypeScript" />
+              <Lang name="Python" />
+              <Lang name="Next" />
+              <Lang name="React" />
+              <Lang name="Tailwind" />
+              <Lang name="HTML" />
+              <Lang name="CSS" />
+              <Lang name="C Lang" />
+              <Lang name="..." />
+            </div>
+          </div>
+          <div className="relative h-[30rem] w-[20rem]">
+            <LogoAnimated className="scale-150" />
           </div>
         </div>
-        <div className="relative h-[30rem] w-[20rem]">
-          <LogoAnimated className="scale-150"/>
-        </div>
       </div>
-      <div className="min-h-[50rem]"></div>
+      <div className="lex place-items-center">
+        <div className="flex justify-between place-items-center">
+          <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
+          <h1 className="m-3 text-4xl font-bold text-my-blue">BLABLABLA</h1>
+          <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
+        </div>
+        <Carousel/>
+        <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
+      </div>
     </main>
   );
 }
@@ -55,6 +67,6 @@ const B = (props: { children: React.ReactNode }) => {
 
 const L = (props: { link: string; children: React.ReactNode }) => {
   return ( // TODO REDO THIS
-    <a target="_blank" href="string" rel="noopener noreferrer" className="hover:bg-my-blue hover:text-slate-50 rounded-lg  transition-all duration-200">{props.children}</a>
+    <a target="_blank" href="string" rel="noopener noreferrer" className="transition-all duration-200 rounded-lg hover:bg-my-blue hover:text-slate-50">{props.children}</a>
   );
 }

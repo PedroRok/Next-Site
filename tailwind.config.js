@@ -53,19 +53,17 @@ module.exports = {
           '0%': {
             opacity: '0',
             transform: 'translateX(-30px)',
-            letterSpacing: '0.10em',
           },
           '100%': {
             opacity: '1',
             transform: 'translateX(0)',
-            letterSpacing: '0em',
           },
         },
       },
       animation: {
-        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'fade-in-down': 'fade-in-down 0.8s ease-out',
         'fade-out-left': 'fade-out-left 0.5s ease-out',
-        'fade-in-left': 'fade-in-left 0.5s ease-out',
+        'fade-in-left': 'fade-in-left 0.8s ease-out',
       }
     },
   },
