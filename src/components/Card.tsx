@@ -55,7 +55,7 @@ export default function Card(props: {
       onMouseOver={() => setHover(true)}
     >
       <div
-        className="relative min-w-[22rem] h-[13.5rem] border col-span-1 rounded-3xl"
+        className="relative min-w-[22rem] h-[13.5rem] border border-neutral-400 col-span-1 rounded-3xl"
         style={{
           transform: clsx(
             "perspective(1000px)",
@@ -81,7 +81,7 @@ export default function Card(props: {
         {right || imgDiv}
         <div className="flex justify-end lg:items-center m-5 max-h-[10.5rem]">
           <div className={clsx(props.right ? "lg:text-left" : "lg:text-right")}>
-            <h2 className="font-trip font-semibold tracking-wide ">
+            <h2 className="font-semibold tracking-wide font-trip ">
               {props.title}
             </h2>
             <div

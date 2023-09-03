@@ -47,7 +47,7 @@ export default function Home() {
           <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
         </div>
         <Carousel/>
-        <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
+        <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center mt-5" />
       </div>
     </main>
   );
