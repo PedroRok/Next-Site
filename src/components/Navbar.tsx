@@ -13,7 +13,7 @@ export default function Navbar(props: any) {
   };
   return (
     <nav className="w-full max-w-[900px]">
-      <nav className="flex justify-between  items-center pt-3 animate-fade-in-down">
+      <nav className="flex justify-between items-center pt-3 animate-fade-in-down">
         <a href="/" className="group font-trip tracking-widest inline-flex items-center text-my-blue p-2 mr-4 text-5xl opacity-90 font-[900] uppercase animate-fade-in-down">
           <Logo size={0.2} className="fill-my-blue hover:cursor-pointer hover:scale-105 transition-all hover:[--glowing:1px] ease-in-out duration-1000 drop-shadow-glow-blue max-w-[6.5rem"/>
           <div className="transition-all ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[40%] overflow-hidden">
