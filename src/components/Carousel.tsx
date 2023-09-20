@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import MyButton from "./MyButton";
+import MyButton from "../assets/MyButton";
 import clsx from "clsx";
 const Flickity = require('react-flickity-component');
 

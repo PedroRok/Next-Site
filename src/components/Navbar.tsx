@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { Logo } from "@components/Logo";
+import { Logo } from "@/assets/Logo";
 
 export default function Navbar(props: any) {
   const [active, setActive] = useState(false);
