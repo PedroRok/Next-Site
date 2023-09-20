@@ -12,8 +12,10 @@ module.exports = {
     extend: {
       colors: {
         'my-blue': '#00d2ff',
+        'my-dark-blue': '#009CBF',
         'my-shadow-blue': '#00d2ff77',
         'my-green': '#06BA78',
+        'my-dark-gray': '#808182',
       },  
       dropShadow: {
         'glow': '0 0 var(--glowing, 8px) var(--glowing-color, rgba(255, 255, 255, 0.3))',

@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   function getTotalCoded() {
-    return activity?.data.grand_total.human_readable_total
+    return activity?.data.grand_total.human_readable_total.replace(",", ".")
   }
   
   /*
@@ -49,17 +49,17 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="max-w-[850px]">
+      <div className="max-w-[850px] h-[35rem] flex">
         
         <div className="flex justify-between mt-5 place-items-center text-slate-50">
           <div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
             <h1>
-              Frase bonitinha <B>bem aqui </B>
-              obrigado
+              Frase bonitinha <B>bem aqui</B> obrigado
             </h1>
-            <h2 className="p-1 font-sans text-[1.4rem] opacity-50">
-              Opa, tudo bem? Meu nome é Pedro Lucas, mas pode me chamar de <B>Rok</B>, comecei a programar em 2019 e desde então isso é minha paixão.
-              Com um total de <B hover="aaaaaa">{getTotalCoded() || "..."}</B> codificando, eu tenho experiência com:
+            <h2 className="p-1 font-sans text-[1.4rem] text-my-dark-gray indent-5">
+              Opa, tudo bem? Meu nome é <B dark={true}>Pedro Lucas</B>, mas pode me chamar de <B dark={true}>Rok</B>, comecei a programar em 2019 e desde então isso é tem sido minha paixão.
+              Programando, tenho um total de <B dark={true}>{(<L link="https://wakatime.com/@Rok">{getTotalCoded()}</L>) || "..."}</B>, trabalhei com grandes Youtubers
+              brasileiros e atualmente estou trabalhando na equipe <B dark={true}><L link="https://www.youtube.com/@AuthenticGames">AuthenticGames</L></B>.
             </h2>
             <div className="mt-4">
               {getLangsCard()}
@@ -67,7 +67,7 @@ export default function Home() {
               <Lang name="React" green={true}/>
               <Lang name="Tailwind" green={true}/>
               <Lang name="Spigot" green={true}/>
-              
+              <Lang name="Forge" green={true}/>
               <Lang name="..."green={true} />
             </div>
           </div>
@@ -89,27 +89,55 @@ export default function Home() {
     </main>
   );
 }
-
+// <div className="absolute opacity-0 flex group-hover:visible group-hover:opacity-100 transition-all duration-300 text-center w-[100%] -top-5 text-sm overflow-visible">{props.data}</div>
 const Lang = (props: { name?: string, data?: string, green?: boolean}) => {
+  const [hover, setHover] = useState(false)
+
   return (
-    <div className="relative inline-flex group">
-      {props.data && <div className="absolute opacity-0 flex group-hover:visible group-hover:opacity-100 transition-all duration-300 text-center w-[100%] -top-5 text-sm overflow-visible">{props.data}</div>}
-      <div className={clsx("m-1 inline-flex bg-opacity-70 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-75 hover:opacity-100 transition-all ease-in-out duration-200 border", props.green ? "text-my-green border-my-green" :  "text-my-blue border-my-blue" )}>
+    <div 
+    onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    className="relative inline-flex justify-center group">
+      {(props.data && hover) && 
+      <Hover>
+        {props.data}
+      </Hover>      
+      }
+      <div 
+      
+      className={clsx("m-1 inline-flex bg-opacity-70 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-75 hover:opacity-100 transition-all ease-in-out duration-200 border", props.green ? "text-my-green border-my-green" :  "text-my-blue border-my-blue" )}>
         {props.name || "..."}
-        
       </div>
     </div>
   );
 };
 
-const B = (props: { children: React.ReactNode, hover?:string }) => {
-  return <span className="text-my-blue relative group">
-    {props.children}
-    </span>;
+const Hover = (props: { children: React.ReactNode }) => {
+  return (
+    <div className="absolute border-r bg-slate-950 border rounded-md opacity-75 p-1 py-[0.5rem] border-my-shadow-blue border-opacity-75 -translate-y-12 text-ellipsis">
+        <div className="truncate text-slate-50">{props.children}</div>
+        <div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-blue border-opacity-75"/>
+    </div>
+  )
+}
+
+const B = (props: { children: React.ReactNode, hover?:string, dark?:boolean }) => {
+  return <span className="inline-block group">
+    <div className="relative">
+        {props.hover && <Hover>{props.hover}</Hover>}
+      </div>
+    <span className={clsx("inline relative group", props.dark ? "text-my-dark-blue" : "text-my-blue")}>
+      {props.children}
+      </span>
+    </span>
 }
 
 const L = (props: { link: string; children: React.ReactNode }) => {
   return ( // TODO REDO THIS
-    <a target="_blank" href="string" rel="noopener noreferrer" className="transition-all duration-200 rounded-lg hover:bg-my-blue hover:text-slate-50">{props.children}</a>
+    <a target="_blank" href={props.link} rel="noopener noreferrer" className="relative transition-all duration-200 rounded-lg group">
+      
+      <a className="group-hover:text-slate-50 transition-all duration-700">{props.children}</a>
+      <div className="absolute w-[100%] h-[1px] border-t border-my-dark-blue  scale-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:border-slate-50 group-hover:scale-[100%]  transition-all duration-700 ease-in-out z-0 "/>
+      </a>
   );
 }

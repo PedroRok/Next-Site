@@ -64,7 +64,7 @@ const NavButton = (props: { name: string; link: string }) => {
     <div className="group mt-5 hover:cursor-pointer">
       <Link
         className={clsx(
-          "w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded font-thin items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
+          "w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
           path === props.link
             ? "text-my-blue drop-shadow-glow-blue"
             : "text-white"

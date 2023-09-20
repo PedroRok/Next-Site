@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import MyButton from "./MyButton";
 import clsx from "clsx";
 const Flickity = require('react-flickity-component');
@@ -44,7 +45,7 @@ const Card = (props: { title: string; review: string; desc: string; image: strin
 
     return (
         <div className="carousel-cell flex justify-center w-[35rem] text-slate-50 overflow-hidden">
-            <img className="relative mr-5 w-[12rem] h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50" src={props.image} alt="a" />
+            <img className="relative mr-5 w-[12rem] h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50" src={props.image} alt="avatar" />
             <div className="self-center w-[20rem]">
                 <h1 className="text-3xl truncate">
                     {props.title}
