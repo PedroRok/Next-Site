@@ -3,13 +3,14 @@ import clsx from "clsx";
 const Flickity = require('react-flickity-component');
 
 export default function Carousel() {
-
+    var val:number = 1;
+    
     var cards = [
-        <Card title="Spok" review="Frase bonitinha de review é isso ai tmj 1 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image="c" />,
-        <Card title="Marco Túlio" review="Frase bonitinha de review é isso ai tmj 2 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image="c" />,
-        <Card title="LGGJ" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image="c" />,
-        <Card title="LGGJa" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image="c" />,
-        <Card title="LGGJd" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image="c" />
+        <Card key={val} title="Spok" review="Frase bonitinha de review é isso ai tmj 1 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image={`https://randomuser.me/api/portraits/men/${val++}.jpg`} />,
+        <Card key={val} title="Marco Túlio" review="Frase bonitinha de review é isso ai tmj 2 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image={`https://randomuser.me/api/portraits/men/${val++}.jpg`} />,
+        <Card key={val} title="LGGJ" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image={`https://randomuser.me/api/portraits/men/${val++}.jpg`} />,
+        <Card key={val} title="LGGJa" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image={`https://randomuser.me/api/portraits/men/${val++}.jpg`} />,
+        <Card key={val} title="LGGJd" review="Frase bonitinha de review é isso ai tmj 3 multiline de preferência pq nois n é de ferro né patrão" desc="Youtuber e Empresário" image={`https://randomuser.me/api/portraits/men/${val++}.jpg`} />
     ];
 
     return (
@@ -26,8 +27,10 @@ const CardRoll = (props: { cards: React.ReactNode[]; }) => {
                 initialIndex: 2,
                 wrapAround: true,
                 prevNextButtons: true,
-                autoPlay: 1500,
+                autoPlay: 5000,
             }}
+            
+
         >
 
                 {props.cards}
@@ -37,12 +40,11 @@ const CardRoll = (props: { cards: React.ReactNode[]; }) => {
 
 
 const Card = (props: { title: string; review: string; desc: string; image: string }) => {
-    var randomNum = Math.floor(Math.random() * 100) + 1
-    var photo = `https://randomuser.me/api/portraits/men/${randomNum}.jpg`
+   
 
     return (
         <div className="carousel-cell flex justify-center w-[35rem] text-slate-50 overflow-hidden">
-            <img className="relative mr-5 w-[12rem] h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50" src={photo} alt="a" />
+            <img className="relative mr-5 w-[12rem] h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50" src={props.image} alt="a" />
             <div className="self-center w-[20rem]">
                 <h1 className="text-3xl truncate">
                     {props.title}

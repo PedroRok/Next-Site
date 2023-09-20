@@ -34,13 +34,16 @@ export function Logo(props: {
 
 export function LogoAnimated(props: { className?: string }) {
   const [started, setStarted] = useState(false);
-  const [scroll, setScroll] = useState(false);
+  const [fade, setFade] = useState(false);
 
+
+  function activeFade() {
+    setFade(true);
+  }
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (started)
-        setScroll(true);
-    });
+    if (started) {
+      setTimeout(activeFade, 5000);
+    }
   });
 
   return (
@@ -54,7 +57,7 @@ export function LogoAnimated(props: { className?: string }) {
             started ? "absolute opacity-0 delay-75" : "absolute opacity-100 "
           )}
         />
-        <div className={clsx( scroll ? "transition-all opacity-0 duration-1000" : "opacity-100")}>
+        <div className={clsx(fade ? "transition-all opacity-0 duration-1000" : "opacity-100")}>
           <Animated
             className={clsx(
               started ? "absolute opacity-100" : "opacity-0 absolute hidden"

@@ -1,28 +1,21 @@
-export default class Wakatime {
-  private codingActivity: any;
-  private langsActivity: any;
-  /**
-   * importAllData
-   */
-  public async importAllData() {
+import { type } from "os";
+
+
+export const dataCode = async () => {
     let dataCode = await fetch(
       "https://wakatime.com/share/@Rok/2993ef66-a86f-47e2-9c72-3cce338ca433.json"
     );
-    let dataLangs = await fetch(
-      "https://wakatime.com/share/@Rok/52ca2157-ebb6-454f-8107-d037143740f8.json"
-    );
-    if (dataCode.ok && dataLangs.ok) {
-      this.codingActivity = await dataCode.json() as CodingActivity;
-      this.langsActivity = await dataLangs.json() as Language;
-      return true;
-    }
-    console.log("Log codeActivity Error?: " + dataCode.status);
-    console.log("Log langsActivity Error?: " + dataLangs.status);
-    return false;
-  }
+    return await dataCode.json() as CodingActivity;
 }
 
-type CodingActivity = {
+export const dataLang = async () => {
+  let dataLangs = await fetch(
+    "https://wakatime.com/share/@Rok/806292a7-f5f9-4337-9d33-1f10139b2404.json"
+  );
+    return await dataLangs.json() as Language;
+}
+
+export type CodingActivity = {
   data: {
     best_day: {
       date: string;
@@ -50,19 +43,21 @@ type CodingActivity = {
   };
 };
 
-type Language = {
+export type Language = {
   data: [
-    {
-      name: string;
-      percent: number;
-      color: string;
-      decimal: number;
-      digital: number;
-      hours: number;
-      minutes: number;
-      text: string;
-      total_seconds: number;
-    }
+    LangProps
   ];
 };
 
+
+export type LangProps = {
+  name: string;
+  percent: number;
+  color: string;
+  decimal: number;
+  digital: number;
+  hours: number;
+  minutes: number;
+  text: string;
+  total_seconds: number;
+}

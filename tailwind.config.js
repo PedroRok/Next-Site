@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'my-blue': '#00d2ff',
         'my-shadow-blue': '#00d2ff77',
+        'my-green': '#06BA78',
       },  
       dropShadow: {
         'glow': '0 0 var(--glowing, 8px) var(--glowing-color, rgba(255, 255, 255, 0.3))',
