@@ -46,6 +46,9 @@ export function LogoAnimated(props: { className?: string }) {
     }
   });
 
+
+
+
   return (
     <div
       onClick={() => setStarted(true)}
@@ -54,7 +57,7 @@ export function LogoAnimated(props: { className?: string }) {
       <div>
         <Started
           className={clsx(
-            started ? "absolute opacity-0 delay-75" : "absolute opacity-100 "
+            started ? "absolute opacity-0 delay-750" : "absolute opacity-100 "
           )}
         />
         <div className={clsx(fade ? "transition-all opacity-0 duration-1000" : "opacity-100")}>
@@ -67,8 +70,8 @@ export function LogoAnimated(props: { className?: string }) {
       </div>
       <div
         className={clsx(
-          started
-            ? "transition-all opacity-100 duration-1000 delay-[5s] drop-shadow-glow-blue"
+          fade
+            ? "transition-all opacity-100 duration-1000 drop-shadow-glow-blue"
             : "opacity-0"
         )}
       >

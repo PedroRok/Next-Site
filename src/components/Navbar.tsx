@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { Logo } from "@/assets/Logo";
+import { Logo } from "@/assets/logo";
+import githubIcon from "@/assets/githubIcon";
+import { NavButton, NavButtonIcon } from "./NavbarButtons";
+import discordIcon from "@/assets/discordIcon";
+import emailIcon from "@/assets/emailIcon";
 
 export default function Navbar(props: any) {
   const [active, setActive] = useState(false);
@@ -40,15 +44,14 @@ export default function Navbar(props: any) {
               />
             </svg>
           </button>
-          {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
           <div
             className={`${active ? "" : "hidden"} 
             relative w-full
-            lg:flex lg:flex-grow lg:w-full transition duration-500 ease-in-out animate-fade-in-down`}
+            lg:flex lg:flex-grow lg:w-full transition duration-500 ease-in-out`}
           >
             <div className="lg:relative absolute lg:flex-row w-full lg:items-center items-start flex flex-col lg:h-full lg:gap-5 mr-5">
-              <NavButton name="Home" link="/" />
-              <NavButton name="Projects" link="/projects" />
+              <NavButton link="/" >Home</NavButton>
+              <NavButton link="/projects" >Projects</NavButton>
             </div>
           </div>
         </div>
@@ -57,30 +60,3 @@ export default function Navbar(props: any) {
     </nav>
   );
 }
-
-const NavButton = (props: { name: string; link: string }) => {
-  const path = usePathname();
-  return (
-    <div className="group mt-5 hover:cursor-pointer">
-      <Link
-        className={clsx(
-          "w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
-          path === props.link
-            ? "text-my-blue drop-shadow-glow-blue"
-            : "text-white"
-        )}
-        href={props.link}
-      >
-        {props.name}
-      </Link>
-      <div
-        className={clsx(
-          "transition-all ease-in-out duration-500 relative min-h-[1px] translate-y-[1px] w-auto rounded-lg bg-my-blue mt-5  [--glowing:20px] group-hover:opacity-100 group-hover:scale-[100%]",
-          path === props.link
-            ? "scale-[100%] opacity-100"
-            : "drop-shadow-glow-blue scale-0 opacity-0"
-        )}
-      />
-    </div>
-  );
-};

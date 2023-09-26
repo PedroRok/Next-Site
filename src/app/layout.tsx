@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import TWHelper from "@/components/TWHelper";
 import clsx from "clsx";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         <TWHelper />
         {children}
+        <Footer/>
       </body>
     </html>
   );

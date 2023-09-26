@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import MyButton from "../assets/MyButton";
+import MyButton from "../assets/myButton";
 import clsx from "clsx";
 const Flickity = require('react-flickity-component');
 
@@ -30,10 +30,7 @@ const CardRoll = (props: { cards: React.ReactNode[]; }) => {
                 prevNextButtons: true,
                 autoPlay: 5000,
             }}
-            
-
         >
-
                 {props.cards}
            </Flickity>
     )

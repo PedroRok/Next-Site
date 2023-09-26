@@ -1,6 +1,6 @@
 "use client";
 import { CodingActivity, LangProps, Language, dataCode, dataLang } from "@/lib/Wakatime";
-import { LogoAnimated } from "@/assets/Logo";
+import { LogoAnimated } from "@/assets/logo";
 import Carousel from "@components/Carousel";
 import { JSX, useEffect, useState } from "react";
 import clsx from "clsx";
@@ -63,8 +63,8 @@ export default function Home() {
       <div className="max-w-[850px] h-[35rem] flex">
         
         <div className="flex justify-between mt-5 place-items-center text-slate-50">
-          <div className="flex-col max-w-[60%] m-5 animate-fade-in-left">
-            <h1>
+          <div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
+            <h1 className="text-[2.5rem]">
               Programador <B>Fullstack</B> <B>criativo</B> e <B>eficiente</B>!
             </h1>
             <h2 className="p-1 font-sans text-[1.4rem] text-my-dark-gray indent-5">

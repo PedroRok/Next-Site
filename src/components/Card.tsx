@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
-import MyButton from "../assets/MyButton";
+import MyButton from "../assets/myButton";
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
 
@@ -36,17 +36,12 @@ export default function Card(props: {
   }, [usingWriter]);
 
   var right: boolean = props.right;
-  //right = useWidth() > 1024 ? props.right : false
-  /**
-   * TODO: do responsivity
-   */
 
   var transformHover = clsx(
     props.right
       ? "rotateY(-13deg) rotateX(5deg) rotate(1deg) scaleY(.9) scaleX(.95) translate(-3%) translateY(-3%)"
       : "rotateY(13deg) rotateX(5deg) rotate(-1deg) scaleY(.9) scaleX(.95) translate(3%) translateY(-8%)"
   );
-  //var transformHover = clsx(useWidth() > 1024 ? transformHover : "rotateY(0deg) rotateX(10deg) rotate(0deg) scaleY(0.9) scaleX(0.95) translate(0%) translateY(0%)")
 
   const imgDiv = (
     <div
