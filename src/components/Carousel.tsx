@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import MyButton from "../assets/myButton";
 import clsx from "clsx";
+import { MyButton } from "./Buttons";
 const Flickity = require('react-flickity-component');
 
 export default function Carousel() {

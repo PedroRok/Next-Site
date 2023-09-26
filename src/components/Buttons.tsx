@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { link } from "fs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -33,6 +34,32 @@ export const NavButtonIcon = (props: { children: React.ReactNode; link: string }
   );
 };
 
+export const FooterButton = (props: { children: React.ReactNode; link: string }) => {
+  return (
+    <div>
+    <Link target="_blank" href={props.link} className=" relative w-full rounded items-center justify-center group-hover:drop-shadow-glow-blue text-white hover:text-my-blue transition-all duration-500 ease-in-out hover:cursor-pointer ">
+      {props.children}
+    </Link>
+    </div>
+    
+  )
+}
+
+
+export const MyButton = ({showIcon = true, ...props}: { className?: string; showIcon?: boolean; buttonName: string; }) => {
+  return (
+    <div className={`${props.className}`}>
+      <button className="inline-flex text-white bg-my-blue py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200">
+        {props.buttonName}
+        {showIcon && (
+          <img src="img/github.svg" className="ml-1 pt-[0.1rem] w-5" />
+        )}
+      </button>
+    </div>
+  );
+}
+
+
 const Line = (props: {show?:boolean, className?:string}) => {
   return (
     <div
@@ -43,5 +70,15 @@ const Line = (props: {show?:boolean, className?:string}) => {
             : "drop-shadow-glow-blue scale-0 opacity-0"
         )}
       />
+  )
+}
+
+
+export const Hover = (props: { children: React.ReactNode }) => {
+  return (
+    <div className="absolute border-r bg-slate-950 border rounded-md opacity-75 p-1 py-[0.5rem] border-my-shadow-blue border-opacity-75 -translate-y-12 text-ellipsis">
+        <div className="truncate text-slate-50 font-trip">{props.children}</div>
+        <div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-blue border-opacity-75"/>
+    </div>
   )
 }

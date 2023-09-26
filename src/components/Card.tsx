@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
-import MyButton from "../assets/myButton";
+
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
+import { MyButton } from "./Buttons";
 
 export default function Card(props: {
   title: string;

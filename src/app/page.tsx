@@ -4,6 +4,7 @@ import { LogoAnimated } from "@/assets/logo";
 import Carousel from "@components/Carousel";
 import { JSX, useEffect, useState } from "react";
 import clsx from "clsx";
+import { Hover } from "@/components/Buttons";
 
 export default function Home() {
   const [language, setLanguage ] = useState<Language | undefined>(undefined)
@@ -91,7 +92,7 @@ export default function Home() {
           <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
         </div>
         <Carousel/>
-        <div className="w-full h-[1px] bg-stone-50 opacity-50 self-center mt-5" />
+        
       </div>
       
     </main>
@@ -120,14 +121,7 @@ const Lang = (props: { name?: string, data?: string, green?: boolean, onClick?:(
   );
 };
 
-const Hover = (props: { children: React.ReactNode }) => {
-  return (
-    <div className="absolute border-r bg-slate-950 border rounded-md opacity-75 p-1 py-[0.5rem] border-my-shadow-blue border-opacity-75 -translate-y-12 text-ellipsis">
-        <div className="truncate text-slate-50 font-trip">{props.children}</div>
-        <div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-blue border-opacity-75"/>
-    </div>
-  )
-}
+
 
 const B = (props: { children: React.ReactNode, hover?:string, dark?:boolean }) => {
   return <span className="inline-block group">

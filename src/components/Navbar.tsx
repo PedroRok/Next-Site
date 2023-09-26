@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { Logo } from "@/assets/logo";
 import githubIcon from "@/assets/githubIcon";
-import { NavButton, NavButtonIcon } from "./NavbarButtons";
+import { NavButton, NavButtonIcon } from "./Buttons";
 import discordIcon from "@/assets/discordIcon";
 import emailIcon from "@/assets/emailIcon";
 
