@@ -33,21 +33,28 @@ export function Logo(props: {
 }
 
 export function LogoAnimated(props: { className?: string }) {
-  const [started, setStarted] = useState(false);
-  const [fade, setFade] = useState(false);
+  var langChanged = false;
+  if (typeof localStorage !== "undefined" && localStorage.getItem("langChanged") == "true") {
+    langChanged = true;
+    localStorage.setItem("langChanged", "false")
+  }
 
+  const [started, setStarted] = useState(langChanged);
+  const [removeOld, setRemoveOld] = useState(langChanged);
+  const [fade, setFade] = useState(langChanged);
 
   function activeFade() {
     setFade(true);
   }
+  function removeOldLogo() {
+    setRemoveOld(true);
+  }
   useEffect(() => {
     if (started) {
+      setTimeout(removeOldLogo, 200);
       setTimeout(activeFade, 5000);
     }
   });
-
-
-
 
   return (
     <div
@@ -57,7 +64,7 @@ export function LogoAnimated(props: { className?: string }) {
       <div>
         <Started
           className={clsx(
-            started ? "absolute opacity-0 delay-750" : "absolute opacity-100 "
+            removeOld ? "absolute opacity-0" : "absolute opacity-100"
           )}
         />
         <div className={clsx(fade ? "transition-all opacity-0 duration-1000" : "opacity-100")}>

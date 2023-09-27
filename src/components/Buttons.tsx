@@ -9,7 +9,7 @@ export const NavButton = (props: { children: React.ReactNode; link: string }) =>
     <div className="group mt-5 hover:cursor-pointer">
       <Link
         className={clsx(
-          "font-bold w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
+          "w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
           path === props.link
             ? "text-my-blue drop-shadow-glow-blue"
             : "text-white"
@@ -23,13 +23,15 @@ export const NavButton = (props: { children: React.ReactNode; link: string }) =>
   );
 };
 
-export const NavButtonIcon = (props: { children: React.ReactNode; link: string }) => {
+export const NavButtonIcon = (props: { children: React.ReactNode, onClick:()=>void}) => {
   return (
-    <div className="group mt-[1.125rem] hover:cursor-pointer ">
+    <div 
+    onClick={props.onClick}
+    className="group mt-[1.125rem] hover:cursor-pointer">
       <div className="w-full rounded items-center justify-center group-hover:drop-shadow-glow-blue text-white group-hover:text-my-blue transition-all duration-500 ease-in-out">
         {props.children}
       </div>
-      {Line({className:"mt-[1.125rem]"})}
+      {Line({className:"mt-[1.40rem]"})}
     </div>
   );
 };

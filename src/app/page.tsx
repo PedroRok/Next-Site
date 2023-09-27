@@ -65,10 +65,10 @@ export default function Home() {
         
         <div className="flex justify-between mt-5 place-items-center text-slate-50">
           <div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
-            <h1 className="text-[2.5rem]">
+            <h1 className="text-[2.60rem] text-justify">
               Programador <B>Fullstack</B> <B>criativo</B> e <B>eficiente</B>!
             </h1>
-            <h2 className="p-1 font-sans text-[1.4rem] text-my-dark-gray indent-5">
+            <h2 className="mt-4 font-sans text-[1.4rem] text-my-dark-gray text-justify">
               Opa, tudo bem? Meu nome é <W>Pedro Lucas</W>, mas pode me chamar de <W>Rok</W>, programo desde 2019 e desde então isso tem sido minha paixão.
               Programando, tenho um total de <B dark={true}>{(<L link="https://wakatime.com/@Rok">{getTotalCoded()}</L>) || "..."}</B> contabilizados,
               faço <W>Ciência da Computação</W> na <W>UFES</W>, trabalhei com grandes Youtubers

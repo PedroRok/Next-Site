@@ -13,7 +13,7 @@ export default function Footer() {
                     <span>Links e Contato:</span>
                     <FooterButton link="https://github.com/Rexblane">{githubIcon()}</FooterButton>
                     <FooterButton link="https://discordapp.com/users/210534961843798016">{discordIcon()}</FooterButton>
-                    <FooterButton link="mailto:eu@lucasmellof.com">{emailIcon()}</FooterButton>
+                    <FooterButton link="mailto:pedrolucasnmm@gmail.com">{emailIcon()}</FooterButton>
                 </div>
             </div>
         </div>
