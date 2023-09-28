@@ -4,174 +4,170 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 1px;
+	width: 1px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  opacity: 0;
-  background-color: #000000;
+	opacity: 0;
+	background-color: #000000;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
+	background: #888;
+	border-radius: 2px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	background: #555;
 }
 
 @font-face {
-  font-family: "Trip Sans Ultra";
-  src: url("../../public/fonts/TripSans-Ultra.eot");
-  src: local("Trip Sans Ultra"), local("TripSans-Ultra"),
-    url("../../public/fonts/TripSans-Ultra.eot?#iefix") format("embedded-opentype"),
-    url("../../public/fonts/TripSans-Ultra.woff2") format("woff2"),
-    url("../../public/fonts/TripSans-Ultra.woff") format("woff"),
-    url("../../public/fonts/TripSans-Ultra.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Trip Sans Ultra";
+	src: url("../../public/fonts/TripSans-Ultra.eot");
+	src: local("Trip Sans Ultra"), local("TripSans-Ultra"),
+		url("../../public/fonts/TripSans-Ultra.eot?#iefix") format("embedded-opentype"),
+		url("../../public/fonts/TripSans-Ultra.woff2") format("woff2"),
+		url("../../public/fonts/TripSans-Ultra.woff") format("woff"),
+		url("../../public/fonts/TripSans-Ultra.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Trip Sans Bold";
-  src: url("../../public/fonts/TripSans-Bold.eot");
-  src: local("Trip Sans Bold"), local("TripSans-Bold"),
-    url("../../public/fonts/TripSans-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../../public/fonts/TripSans-Bold.woff2") format("woff2"),
-    url("../../public/fonts/TripSans-Bold.woff") format("woff"),
-    url("../../public/fonts/TripSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Trip Sans Bold";
+	src: url("../../public/fonts/TripSans-Bold.eot");
+	src: local("Trip Sans Bold"), local("TripSans-Bold"),
+		url("../../public/fonts/TripSans-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../../public/fonts/TripSans-Bold.woff2") format("woff2"),
+		url("../../public/fonts/TripSans-Bold.woff") format("woff"),
+		url("../../public/fonts/TripSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Trip Sans";
-  src: url("../../public/fonts/TripSans-Medium.eot");
-  src: local("Trip Sans Medium"), local("TripSans-Medium"),
-    url("../../public/fonts/TripSans-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../../public/fonts/TripSans-Medium.woff2") format("woff2"),
-    url("../../public/fonts/TripSans-Medium.woff") format("woff"),
-    url("../../public/fonts/TripSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Trip Sans";
+	src: url("../../public/fonts/TripSans-Medium.eot");
+	src: local("Trip Sans Medium"), local("TripSans-Medium"),
+		url("../../public/fonts/TripSans-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../../public/fonts/TripSans-Medium.woff2") format("woff2"),
+		url("../../public/fonts/TripSans-Medium.woff") format("woff"),
+		url("../../public/fonts/TripSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Trip Sans Mono";
-  src: url("../../public/fonts/TripSansMono-Regular.eot");
-  src: local("Trip Sans Mono Regular"), local("TripSansMono-Regular"),
-    url("../../public/fonts/TripSansMono-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../../public/fonts/TripSansMono-Regular.woff2") format("woff2"),
-    url("../../public/fonts/TripSansMono-Regular.woff") format("woff"),
-    url("../../public/fonts/TripSansMono-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Trip Sans Mono";
+	src: url("../../public/fonts/TripSansMono-Regular.eot");
+	src: local("Trip Sans Mono Regular"), local("TripSansMono-Regular"),
+		url("../../public/fonts/TripSansMono-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../../public/fonts/TripSansMono-Regular.woff2") format("woff2"),
+		url("../../public/fonts/TripSansMono-Regular.woff") format("woff"),
+		url("../../public/fonts/TripSansMono-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Trip Sans";
-  src: url("../../public/fonts/TripSans-Regular.eot");
-  src: local("Trip Sans Regular"), local("TripSans-Regular"),
-    url("../../public/fonts/TripSans-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../../public/fonts/TripSans-Regular.woff2") format("woff2"),
-    url("../../public/fonts/TripSans-Regular.woff") format("woff"),
-    url("../../public/fonts/TripSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Trip Sans";
+	src: url("../../public/fonts/TripSans-Regular.eot");
+	src: local("Trip Sans Regular"), local("TripSans-Regular"),
+		url("../../public/fonts/TripSans-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../../public/fonts/TripSans-Regular.woff2") format("woff2"),
+		url("../../public/fonts/TripSans-Regular.woff") format("woff"),
+		url("../../public/fonts/TripSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 h1 {
-  font-family: "Trip Sans Ultra", sans-serif;
-  font-size: 3rem;
-  line-height: 1.1;
+	font-family: "Trip Sans Ultra", sans-serif;
+	font-size: 3rem;
+	line-height: 1.1;
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: -0.05em;
+	font-family: "Inter", sans-serif;
+	font-size: 2rem;
+	line-height: 1.1;
+	letter-spacing: -0.05em;
 }
 
 .background::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(0deg,
-      #000000 0%,
-      #131313 100%);
-  /* #172749 #3061a5 */
-  z-index: -4;
+	content: "";
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(0deg, #000000 0%, #131313 100%);
+	/* #172749 #3061a5 */
+	z-index: -4;
 }
 
 .background::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/img/noise.png");
-  z-index: -3;
+	content: "";
+	position: fixed;
+	inset: 0;
+	background-image: url("/img/noise.png");
+	z-index: -3;
 }
 
-
 .carousel-cell {
-  /* dim unselected */
-  opacity: 0.7;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-  -webkit-transition: opacity 0.3s, -webkit-filter 0.3s, filter 0.3s;
-  transition: opacity 0.3s, filter 0.3s;
+	/* dim unselected */
+	opacity: 0.7;
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: opacity 0.3s, -webkit-filter 0.3s, filter 0.3s;
+	transition: opacity 0.3s, filter 0.3s;
 }
 
 /* brighten selected image */
 .carousel-cell.is-selected {
-  opacity: 1;
-  -webkit-filter: none;
-  filter: none;
+	opacity: 1;
+	-webkit-filter: none;
+	filter: none;
 }
 
-
 .flickity-prev-next-button {
-  width: 40px;
-  height: 40px;
-  opacity: 0.6;
-  transition: all 0.3s ease-in-out;
+	width: 40px;
+	height: 40px;
+	opacity: 0.6;
+	transition: all 0.3s ease-in-out;
 }
 
 .flickity-prev-next-button.next:hover {
-  opacity: 1;
-  translate: 10px 0;
+	opacity: 1;
+	translate: 10px 0;
 }
 
 .flickity-prev-next-button:hover {
-  opacity: 1;
-  translate: -10px 0;
+	opacity: 1;
+	translate: -10px 0;
 }
 
 /* arrow color */
 .flickity-prev-next-button .arrow {
-  fill: white;
+	fill: white;
 }
 
 /* closer to edge */
 .flickity-prev-next-button.previous {
-  position: absolute;
-  top: 35%;
-  left: 10px;
+	position: absolute;
+	top: 35%;
+	left: 10px;
 }
 
 .flickity-prev-next-button.next {
-  position: absolute;
-  top: 35%;
-  right: 10px;
+	position: absolute;
+	top: 35%;
+	right: 10px;
 }
