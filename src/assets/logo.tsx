@@ -34,11 +34,6 @@ export function Logo(props: {
 
 export function LogoAnimated(props: { className?: string }) {
 	var langChanged = false;
-	if (typeof localStorage !== "undefined" && localStorage.getItem("langChanged") == "true") {
-		langChanged = true;
-		localStorage.setItem("langChanged", "false");
-	}
-
 	const [started, setStarted] = useState(langChanged);
 	const [removeOld, setRemoveOld] = useState(langChanged);
 	const [fade, setFade] = useState(langChanged);

@@ -1,36 +1,40 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { startTransition, useState, useEffect } from "react";
 import { Logo } from "@/assets/logo";
-import { NavButton, NavButtonIcon } from "./Buttons";
+import { MyButton, NavButton, NavButtonIcon } from "./Buttons";
 import { English, Portuguese } from "@/assets/langIcons";
+import { useLocale } from "next-intl";
 import When from "./When";
+import { selectNextLang } from "@/i18n/settings";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar() {
+	const locale = useLocale();
+	const router = useRouter();
+	const pathname = usePathname();
 	const [active, setActive] = useState(false);
-	const [lang, setLang] = useState("pt");
-
-	useEffect(() => {
-		const storedLang = localStorage.getItem("lang");
-		if (storedLang) {
-			setLang(storedLang);
-		}
-	}, []);
 
 	const handleClick = () => {
 		setActive(!active);
 	};
 
+	useEffect(() => {
+		const lang = selectNextLang(locale);
+		console.log({
+			locale,
+			lang,
+			pathname
+		});
+	}, []);
+
 	const changeLang = () => {
-		if (typeof localStorage !== "undefined") {
-			localStorage.setItem("langChanged", "true");
-			if (lang == "pt") {
-				localStorage.setItem("lang", "en");
-				window.location.reload();
-				return;
-			}
-			localStorage.setItem("lang", "pt");
-			window.location.reload();
-		}
+		
+		startTransition(() => {
+			// @ts-ignore
+			router.replace(pathname, {  });
+		});
+		// window.location.reload();
 	};
 
 	return (
@@ -77,13 +81,15 @@ export default function Navbar() {
 							<NavButton link="/">Início</NavButton>
 							<NavButton link="/projects">Projetos</NavButton>
 							<NavButtonIcon onClick={changeLang}>
-								<When if={lang == "pt"}>
+								{/* <When if={i18next.language == "pt"}>
 									<Portuguese />
 								</When>
-								<When if={lang == "en"}>
+								<When if={i18next.language == "en"}>
 									<English />
-								</When>
+								</When> */}
 							</NavButtonIcon>
+							<Link href={pathname} lang="br" locale="br">BR</Link> 
+							<Link href={pathname} lang="en" locale="en">EN</Link> 
 						</div>
 					</div>
 				</div>
