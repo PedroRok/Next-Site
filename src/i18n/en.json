@@ -1,4 +1,18 @@
 {
-	"title": "Make the L",
-	"description": "work"
+	"title": "Rok's Portfolio",
+	"page": {
+		"title": "<blue>Fullstack</blue> Developer <blue>creative</blue> and <blue>efficient</blue>!",
+		"description": "Hey, how's it going? My name is <white>Pedro Lucas</white>, but you can call me <white>Rok</white>. I've been programming since 2019, and it's been my passion ever since. I have a total of <blue><waka></waka></blue> of programming under my belt. I'm pursuing a degree in <white>Computer Science</white> at <white>UFES</white>, worked with prominent Brazilian YouTubers, and currently, I'm part of the <blue><authentic></authentic></blue> team.",
+		"feedback": "REVIEWS"
+	},
+	"misc": {
+		"see_more": "See More",
+		"see_less": "See Less",
+		"footer": "Links and Contact:",
+		"nav": {
+		"home": "Home",
+		"projects": "Projects"
+	}
+	},
+	"description": "Welcome to my portfolio! I'm a fullstack developer with a passion for creating beautiful and efficient websites and applications."
 }

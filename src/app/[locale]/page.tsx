@@ -57,20 +57,19 @@ export default function Home() {
 			<div className="max-w-[850px] h-[35rem] flex">
 				<div className="flex justify-between mt-5 place-items-center text-slate-50">
 					<div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
-						<h1 className="text-[2.60rem] text-justify">
-							{t("title")}
-							Programador <B>Fullstack</B> <B>criativo</B> e <B>eficiente</B>!
+						<h1 className="text-[2.10rem] uppercase">
+							{t.rich("page.title", {
+								blue: (chunks) => <B>{chunks}</B>
+								} 
+							)}
 						</h1>
 						<h2 className="mt-4 font-sans text-[1.4rem] text-my-dark-gray text-justify">
-							Opa, tudo bem? Meu nome é <W>Pedro Lucas</W>, mas pode me chamar de <W>Rok</W>, programo
-							desde 2019 e desde então isso tem sido minha paixão. Programando, tenho um total de{" "}
-							<B dark={true}>{<L link="https://wakatime.com/@Rok">{getTotalCoded()}</L> || "..."}</B>{" "}
-							contabilizados, faço <W>Ciência da Computação</W> na <W>UFES</W>, trabalhei com grandes
-							Youtubers Brasileiros e atualmente estou trabalhando na equipe{" "}
-							<B dark={true}>
-								<L link="https://www.youtube.com/@AuthenticGames">AuthenticGames</L>
-							</B>
-							.
+							{t.rich("page.description", {
+								white: (chunks) => <W>{chunks}</W>,
+								blue: (chunks) => <B dark={true}>{chunks}</B>,
+								waka: () => <L link="https://wakatime.com/@Rok">{getTotalCoded() || "..."}</L>,
+								authentic: () => <L link="https://www.youtube.com/@AuthenticGames">AuthenticGames</L>
+							})}
 						</h2>
 						<div className="mt-4">
 							{getLangsCard(more ? 10 : 6)}
@@ -81,7 +80,7 @@ export default function Home() {
 									setMore(!more);
 								}}
 								green={true}
-								data={more ? "Ver menos" : "Ver mais"}
+								data={more ? t("misc.see_less") : t("misc.see_more") }
 							/>
 						</div>
 					</div>
@@ -93,7 +92,7 @@ export default function Home() {
 			<div className="place-items-center w-[850px] overflow-hidden">
 				<div className="flex justify-between place-items-center">
 					<div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
-					<h1 className="m-3 text-4xl font-bold text-my-blue">AVALIAÇÕES</h1>
+					<h1 className="m-3 text-4xl font-bold text-my-blue">{t("page.feedback")}</h1>
 					<div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
 				</div>
 				<Carousel />
@@ -115,7 +114,7 @@ const Lang = (props: { name?: string; data?: string; green?: boolean; onClick?: 
 			<div
 				onClick={props.onClick}
 				className={clsx(
-					"m-1 inline-flex bg-opacity-70 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-75 hover:opacity-100 transition-all ease-in-out duration-200 border",
+					"m-1 inline-flex bg-opacity-70 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-75 hover:opacity-100 transition-all ease-in-out duration-200 border font-trip",
 					props.green ? "text-my-green border-my-green" : "text-my-blue border-my-blue"
 				)}
 			>
@@ -151,7 +150,7 @@ const L = (props: { link: string; children: React.ReactNode }) => {
 			rel="noopener noreferrer"
 			className="relative transition-all duration-200 rounded-lg group"
 		>
-			{/* <a className="transition-all duration-700 group-hover:text-slate-50">{props.children}</a> */}
+			<div className="transition-all duration-700 group-hover:text-slate-50">{props.children}</div>
 			<div className="absolute w-[100%] h-[1px] border-t border-my-dark-blue  scale-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:border-slate-50 group-hover:scale-[100%]  transition-all duration-700 ease-in-out z-0 " />
 		</a>
 	);

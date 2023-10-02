@@ -1,4 +1,18 @@
 {
-	"title": "Faz o L",
-	"description": "funciona"
+	"title": "Portfólio de Rok",
+	"page": {
+		"title": "Programador <blue>Fullstack</blue> <blue>criativo</blue> e <blue>eficiente</blue>!",
+		"description": "Opa, tudo bem? Meu nome é <white>Pedro Lucas</white>, mas pode me chamar de <white>Rok</white>, programo desde 2019 e desde então isso tem sido minha paixão. Programando, tenho um total de <blue><waka></waka></blue> contabilizados, faço <white>Ciência da Computação</white> na <white>UFES</white>, trabalhei com grandes Youtubers Brasileiros e atualmente estou trabalhando na equipe <blue><authentic></authentic></blue>.",
+		"feedback": "AVALIAÇÕES"
+	},
+	"misc": {
+		"see_more": "Ver mais",
+		"see_less": "Ver menos",
+		"footer": "Links e Contato:",
+		"nav": {
+			"home": "Início",
+			"projects": "Projetos"
+		}
+	},
+	"description": "Bem-vindo ao meu portfólio! Sou um desenvolvedor fullstack com paixão por criar sites e aplicativos bonitos e eficientes."
 }

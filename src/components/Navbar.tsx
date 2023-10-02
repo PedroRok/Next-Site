@@ -3,10 +3,9 @@ import React, { startTransition, useState, useEffect } from "react";
 import { Logo } from "@/assets/logo";
 import { MyButton, NavButton, NavButtonIcon } from "./Buttons";
 import { English, Portuguese } from "@/assets/langIcons";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import When from "./When";
 import { selectNextLang } from "@/i18n/settings";
-import Link from "next/link";
 import {usePathname, useRouter} from "next-intl/client";
 
 export default function Navbar() {
@@ -14,6 +13,7 @@ export default function Navbar() {
 	const router = useRouter();
 	const pathname = usePathname();
 	const [active, setActive] = useState(false);
+	const t = useTranslations();
 
 	const handleClick = () => {
 		setActive(!active);
@@ -66,8 +66,8 @@ export default function Navbar() {
             lg:flex lg:flex-grow lg:w-full transition duration-500 ease-in-out`}
 					>
 						<div className="absolute flex flex-col items-start w-full mr-5 lg:relative lg:flex-row lg:items-center lg:h-full lg:gap-5">
-							<NavButton link="/">Início</NavButton>
-							<NavButton link="/projects">Projetos</NavButton>
+							<NavButton link="/">{t("misc.nav.home")}</NavButton>
+							<NavButton link="/projects">{t("misc.nav.projects")}</NavButton>
 							<NavButtonIcon onClick={changeLang}>
 								<When if={locale === "br"}>
 									<Portuguese />

@@ -24,7 +24,6 @@ type Props = {
 };
 
 export async function generateMetadata({params} : Props) {
-	console.log("generateMetadata", params);
 	let messages : any;
 
 	try {
@@ -50,7 +49,6 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }: Props) {
-	console.log("rootlayout", params);
 	let messages: AbstractIntlMessages | undefined;
 
 	try {
@@ -68,7 +66,9 @@ export default async function RootLayout({ children, params }: Props) {
 					inter.className
 				)}
 			>
-				<NextIntlClientProvider locale={params.locale} messages={messages}>
+				<NextIntlClientProvider 
+				locale={params.locale} 
+				messages={messages}>
 					<Navbar />
 					<TWHelper />
 					{children}
