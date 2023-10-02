@@ -5,13 +5,13 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export const NavButton = (props: { children: React.ReactNode; link: string }) => {
-	const path = usePathname();
+	const path = usePathname().replace("en/","").replace("en", "");
 	return (
 		<div className="mt-5 group hover:cursor-pointer">
 			<Link
 				className={clsx(
 					"w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
-					path === props.link ? "text-my-blue drop-shadow-glow-blue" : "text-white"
+					path=== props.link ? "text-my-blue drop-shadow-glow-blue" : "text-white"
 				)}
 				href={props.link}
 			>

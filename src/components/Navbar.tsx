@@ -6,8 +6,8 @@ import { English, Portuguese } from "@/assets/langIcons";
 import { useLocale } from "next-intl";
 import When from "./When";
 import { selectNextLang } from "@/i18n/settings";
-import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import {usePathname, useRouter} from "next-intl/client";
 
 export default function Navbar() {
 	const locale = useLocale();
@@ -19,22 +19,10 @@ export default function Navbar() {
 		setActive(!active);
 	};
 
-	useEffect(() => {
-		const lang = selectNextLang(locale);
-		console.log({
-			locale,
-			lang,
-			pathname
-		});
-	}, []);
-
 	const changeLang = () => {
-		
 		startTransition(() => {
-			// @ts-ignore
-			router.replace(pathname, {  });
+			router.replace(pathname, { locale: selectNextLang(locale) });
 		});
-		// window.location.reload();
 	};
 
 	return (
@@ -81,15 +69,15 @@ export default function Navbar() {
 							<NavButton link="/">Início</NavButton>
 							<NavButton link="/projects">Projetos</NavButton>
 							<NavButtonIcon onClick={changeLang}>
-								{/* <When if={i18next.language == "pt"}>
+								<When if={locale === "br"}>
 									<Portuguese />
 								</When>
-								<When if={i18next.language == "en"}>
+								<When if={locale === "en"}>
 									<English />
-								</When> */}
+								</When>
 							</NavButtonIcon>
-							<Link href={pathname} lang="br" locale="br">BR</Link> 
-							<Link href={pathname} lang="en" locale="en">EN</Link> 
+							{/* <Link href={pathname} lang="br" locale="br">BR</Link>  */}
+							{/* <Link href={pathname} lang="en" locale="en">EN</Link>  */}
 						</div>
 					</div>
 				</div>

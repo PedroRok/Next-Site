@@ -19,16 +19,21 @@ const inter = Inter({ subsets: ["latin"] });
 type Props = {
 	children: React.ReactNode;
 	params: {
-		lang: string;
+		locale: string;
 	};
 };
 
 export async function generateMetadata({params} : Props) {
-	let lang = params.lang || "en";
-	console.log({lang, params});
-	const messages = (await import(`../../i18n/${lang}.json`)).default;
+	console.log("generateMetadata", params);
+	let messages : any;
 
-	const t = createTranslator({ locale: lang, messages });
+	try {
+		messages = (await import(`@/i18n/${params.locale}.json`)).default
+	} catch (error) {
+		messages = (await import(`@/i18n/br.json`)).default
+	}
+
+	const t = createTranslator({ locale: params.locale, messages });
 	// const t = {
 		// title: "Rok's Portfolio",
 		// description: "A portfolio made by Rok"
@@ -45,25 +50,25 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }: Props) {
-	console.log(params);
+	console.log("rootlayout", params);
 	let messages: AbstractIntlMessages | undefined;
 
 	try {
-		messages = (await import(`../../i18n/${params.lang}.json`)).default;
+		messages = (await import(`@/i18n/${params.locale}.json`)).default;
 	} catch (error) {
 		notFound();
 	}
 
 
 	return (
-		<html lang={params.lang}>
+		<html lang={params.locale}>
 			<body
 				className={clsx(
 					"flex flex-col items-center min-h-screen background select-none",
 					inter.className
 				)}
 			>
-				<NextIntlClientProvider locale={params.lang} messages={messages}>
+				<NextIntlClientProvider locale={params.locale} messages={messages}>
 					<Navbar />
 					<TWHelper />
 					{children}
