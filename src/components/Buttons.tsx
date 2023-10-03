@@ -47,20 +47,20 @@ export const FooterButton = (props: { children: React.ReactNode; link: string })
 	);
 };
 
-export const MyButton = ({
-	showIcon = true,
-	...props
-}: {
+export const MyButton = (
+	props: {
 	className?: string;
-	showIcon?: boolean;
-	buttonName: string;
+	children?: React.ReactNode;
+	link?: string;
+	buttonName?: string;
 }) => {
 	return (
 		<div className={`${props.className}`}>
-			<button className="inline-flex text-white bg-my-blue py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200">
+			<a href={props.link} target="_blank" className="cursor-pointer inline-flex scale-90 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200"
+			>
 				{props.buttonName}
-				{showIcon && <Image src="img/github.svg" alt="Github Logo" width={20} height={20} />}
-			</button>
+				{props.children}
+			</a>
 		</div>
 	);
 };

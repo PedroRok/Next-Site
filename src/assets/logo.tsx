@@ -86,6 +86,7 @@ function VerticalLogo(props: { className?: string }) {
 	);
 }
 
+
 function Started(props: { className?: string }) {
 	return (
 		<svg className={props.className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540">
