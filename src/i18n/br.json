@@ -11,11 +11,15 @@
 		"list": {
 			"my-site": {
 				"title": "Meu site",
-				"description": "Meu site pessoal, este site! Feito com Next, Tailwind e TypeScript. Meu primeiro portfólio, feito em 2023."
+				"description": "Meu site pessoal, este site! Feito com Next JS, Tailwind e TypeScript. Um site simples, mas que me representa."
 			},
 			"theft": {
 				"title": "Mod do Ladrão",
 				"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+			},
+			"schedule": {
+				"title": "Escalonamento de Processos",
+				"description": "Projeto para conclusão da matéria de Sistemas Operacionais, pela UFES. Feito em Java, com o objetivo de simular o escalonamento de processos em um SO."
 			}
 		}
 	},

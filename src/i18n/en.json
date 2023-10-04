@@ -10,12 +10,16 @@
 		"title": "PROJECT",
 		"list": {
 			"my-site": {
-				"title": "Meu site",
-				"description": "Meu site pessoal, este site! Feito com Next, Tailwind e TypeScript. Meu primeiro portfólio, feito em 2023."
+				"title": "My site",
+				"description": "My personal website, made with Next JS, Tailwind and Typescript. It's a simple website, but it's a good example of my work."
 			},
 			"theft": {
-				"title": "Mod do Ladrão",
+				"title": "Theft Mod",
 				"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+			},
+			"schedule": {
+				"title": "Process Scheduler",
+				"description": "Final project for the Operating Systems discipline, at UFES. Made in Java, with the aim of simulating process scheduling in an OS."
 			}
 		}
 	},

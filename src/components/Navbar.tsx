@@ -7,17 +7,13 @@ import { useLocale, useTranslations } from "next-intl";
 import When from "./When";
 import { selectNextLang } from "@/i18n/settings";
 import {usePathname, useRouter} from "next-intl/client";
+import SunIcon from "@/assets/sunIcon";
 
 export default function Navbar() {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
-	const [active, setActive] = useState(false);
 	const t = useTranslations();
-
-	const handleClick = () => {
-		setActive(!active);
-	};
 
 	const changeLang = () => {
 		startTransition(() => {
@@ -41,31 +37,12 @@ export default function Navbar() {
 					</div>
 				</a>
 				<div>
-					<button
-						className="inline-flex p-3 my-1 ml-auto text-white outline-none hover:bg-cyan-800 hover:rounded lg:hidden hover:text-white"
-						onClick={handleClick}
-					>
-						<svg
-							className="w-6 h-6"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={2}
-								d="M4 6h16M4 12h16M4 18h16"
-							/>
-						</svg>
-					</button>
 					<div
-						className={`${active ? "" : "hidden"} 
-            relative w-full
-            lg:flex lg:flex-grow lg:w-full transition duration-500 ease-in-out`}
+						className={`
+            relative 
+            flex flex-grow w-full transition duration-500 ease-in-out`}
 					>
-						<div className="absolute flex flex-col items-start w-full mr-5 lg:relative lg:flex-row lg:items-center lg:h-full lg:gap-5">
+						<div className="flex w-full mr-5 relative flex-row items-center h-full gap-5">
 							<NavButton link="/">{t("misc.nav.home")}</NavButton>
 							<NavButton link="/projects">{t("misc.nav.projects")}</NavButton>
 							<NavButtonIcon onClick={changeLang}>

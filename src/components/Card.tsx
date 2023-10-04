@@ -9,12 +9,14 @@ import GithubIcon from "@/assets/githubIcon";
 import { useTranslations } from "next-intl";
 import SiteIcon from "@/assets/siteIcon";
 import { getSocialMedia } from "./SocialMedia";
+import MinecraftIcon from "@/assets/minecraftIcon";
 
 export default function Card(props: {
 	title: string;
 	description: string;
 	image: string;
 	right: boolean;
+	minecraft?: boolean;
 	social?: { type: string; url: string }[];
 }) {
 	const [hover, setHover] = useState(false);
@@ -24,18 +26,20 @@ export default function Card(props: {
 	const [typewriter, setTypeWriter] = useState(<></>);
 	const t = useTranslations();
 
-
 	const socials = props.social?.map((element) => {
 		return (
-			<MyButton 
-			className={clsx(
-				"mt-2 transition-all duration-500",
-				showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
-			)}
-			key={element.type} link={element.url}>{getSocialMedia(element.type)}</MyButton>
-		)
+			<MyButton
+				className={clsx(
+					"mt-2 transition-all duration-500",
+					showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
+				)}
+				key={element.type}
+				link={element.url}
+			>
+				{getSocialMedia(element.type)}
+			</MyButton>
+		);
 	});
-
 
 	useEffect(() => {
 		if (usingWriter) {
@@ -93,7 +97,11 @@ export default function Card(props: {
 				{right || imgDiv}
 				<div className="flex justify-end lg:items-center m-5 max-h-[10.5rem]">
 					<div className={clsx(props.right ? "lg:text-left" : "lg:text-right")}>
-						<h2 className="font-semibold tracking-wide font-trip ">{props.title}</h2>
+						<div className="inline-flex items-center">
+							{props.minecraft && (right || <MinecraftIcon/>)}
+							<h2 className="font-semibold tracking-wide font-trip ">{props.title}</h2>
+							{props.minecraft && (right && <MinecraftIcon/>)}
+						</div>
 						<div
 							className={clsx(
 								"font-trip min-w-[17rem] mt-2 break-normal overflow-hidden hover:overflow-auto opacity-75 transition-all duration-[2s]",
@@ -103,10 +111,7 @@ export default function Card(props: {
 							{typewriter}
 						</div>
 						{usingWriter ? (
-							<div className={clsx("flex", props.right ? "" : "justify-end")}>
-	
-								{socials}
-							</div>
+							<div className={clsx("flex", props.right ? "" : "justify-end")}>{socials}</div>
 						) : (
 							<span
 								onClick={() => setUsingWriter(true)}

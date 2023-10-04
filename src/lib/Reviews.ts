@@ -1,7 +1,7 @@
 export const data = [
     {
         id: "marco",
-        name: "Marco Túlio",
+        name: "Review 1",
         image: "https://avatars.githubusercontent.com/u/70350599?v=4",
         social: [
             {
@@ -17,7 +17,7 @@ export const data = [
     {
         id: "template",
         name: "Template",
-        image: "https://avatars.githubusercontent.com/u/70350599?v=4",
+        image: "https://avatars.githubusercontent.com/u/70350599?v=1",
         social: [
             {
                 type: "youtube",
@@ -40,7 +40,7 @@ export const data = [
     {
         id: "test",
         name: "Test",
-        image: "https://avatars.githubusercontent.com/u/70350599?v=4",
+        image: "https://avatars.githubusercontent.com/u/70350599?v=2",
         social: [
             {
                 type: "site",

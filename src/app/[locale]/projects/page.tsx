@@ -19,6 +19,7 @@ export default function Projects() {
 				description={t(`projects.list.${element.id}.description`)}
 				right={right = !right}
 				social={element.social}
+				minecraft={element.minecraft}
 			/>
 		);
 	})
