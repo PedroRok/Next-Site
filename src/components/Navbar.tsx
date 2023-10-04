@@ -76,8 +76,6 @@ export default function Navbar() {
 									<English />
 								</When>
 							</NavButtonIcon>
-							{/* <Link href={pathname} lang="br" locale="br">BR</Link>  */}
-							{/* <Link href={pathname} lang="en" locale="en">EN</Link>  */}
 						</div>
 					</div>
 				</div>

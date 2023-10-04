@@ -1,5 +1,6 @@
 "use client";
 
+import { data } from "@/lib/Projects";
 import Card from "@components/Card";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -7,6 +8,21 @@ import { useState } from "react";
 export default function Projects() {
 	const [active, setActive] = useState(false)
 	const t = useTranslations()
+
+	var right = false;
+	let cards = data.map((element) => {
+		return (
+			<Card
+				key={element.id}
+				title={t(`projects.list.${element.id}.title`)}
+				image={element.image}
+				description={t(`projects.list.${element.id}.description`)}
+				right={right = !right}
+				social={element.social}
+			/>
+		);
+	})
+
 
 	return (
 		<div
@@ -29,37 +45,7 @@ export default function Projects() {
 					<Line />
 				</div>
 			</div>
-
-			<Card
-				title="Cool Project 1"
-				image="https://picsum.photos/1920/1080"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias"
-				right={true}
-			/>
-			<Card
-				title="Youtuber Project"
-				image="https://picsum.photos/1920/1081"
-				description="lorem ipsum dolor sit amet"
-				right={false}
-			/>
-			<Card
-				title="Lorem Ipsum"
-				image="https://picsum.photos/1920/1082"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias"
-				right={true}
-			/>
-			<Card
-				title="Meu Site"
-				image="https://picsum.photos/1920/1083"
-				description="lorem ipsum dolor sit amet"
-				right={false}
-			/>
-			<Card
-				title="Python Bot"
-				image="https://picsum.photos/1920/1084"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor autem, perspiciatis vel impedit iure eius et eos libero nisi exercitationem rerum alias"
-				right={true}
-			/>
+			{cards}
 		</div>
 	);
 }

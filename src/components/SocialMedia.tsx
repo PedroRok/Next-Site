@@ -1,3 +1,4 @@
+import GithubIcon from "@/assets/githubIcon";
 import InstagramIcon from "@/assets/instagramIcon";
 import SiteIcon from "@/assets/siteIcon";
 import TwitterIcon from "@/assets/twitterIcon";
@@ -13,6 +14,8 @@ export function getSocialMedia(key: string) {
             return <YoutubeIcon/>
         case "site":
             return <SiteIcon/>
+        case "github":
+            return <GithubIcon strokeWidth={2.2}/>
             
     }
 }

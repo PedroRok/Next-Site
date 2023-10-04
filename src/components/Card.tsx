@@ -8,12 +8,14 @@ import { Hover, MyButton } from "./Buttons";
 import GithubIcon from "@/assets/githubIcon";
 import { useTranslations } from "next-intl";
 import SiteIcon from "@/assets/siteIcon";
+import { getSocialMedia } from "./SocialMedia";
 
 export default function Card(props: {
 	title: string;
 	description: string;
 	image: string;
 	right: boolean;
+	social?: { type: string; url: string }[];
 }) {
 	const [hover, setHover] = useState(false);
 	const [showButton, setShowButton] = useState(false);
@@ -21,6 +23,19 @@ export default function Card(props: {
 	const [usingWriter, setUsingWriter] = useState(false);
 	const [typewriter, setTypeWriter] = useState(<></>);
 	const t = useTranslations();
+
+
+	const socials = props.social?.map((element) => {
+		return (
+			<MyButton 
+			className={clsx(
+				"mt-2 transition-all duration-500",
+				showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
+			)}
+			key={element.type} link={element.url}>{getSocialMedia(element.type)}</MyButton>
+		)
+	});
+
 
 	useEffect(() => {
 		if (usingWriter) {
@@ -38,7 +53,7 @@ export default function Card(props: {
 				/>
 			);
 		}
-	}, [usingWriter]);
+	}, [props.description, usingWriter]);
 
 	var right: boolean = props.right;
 
@@ -90,22 +105,7 @@ export default function Card(props: {
 						{usingWriter ? (
 							<div className={clsx("flex", props.right ? "" : "justify-end")}>
 	
-								<MyButton
-									className={clsx(
-										"mt-2 transition-all duration-500",
-										showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
-									)}
-								>
-									<GithubIcon strokeWidth={2.2}/>
-								</MyButton>
-								<MyButton
-									className={clsx(
-										"mt-2 transition-all duration-500",
-										showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
-									)}
-								>
-									<SiteIcon/>
-								</MyButton>
+								{socials}
 							</div>
 						) : (
 							<span

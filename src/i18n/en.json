@@ -7,7 +7,17 @@
 		"feedback": "REVIEWS"
 	},
 	"projects": {
-		"title": "PROJECT"
+		"title": "PROJECT",
+		"list": {
+			"my-site": {
+				"title": "Meu site",
+				"description": "Meu site pessoal, este site! Feito com Next, Tailwind e TypeScript. Meu primeiro portfólio, feito em 2023."
+			},
+			"theft": {
+				"title": "Mod do Ladrão",
+				"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+			}
+		}
 	},
 	"misc": {
 		"see_more": "See More",

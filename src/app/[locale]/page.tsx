@@ -63,7 +63,8 @@ export default function Home() {
 								} 
 							)}
 						</h1>
-						<h2 className="mt-4 font-sans text-[1.4rem] text-my-dark-gray text-justify">
+						<h2 className="mt-4 font-sans text-[1.2rem] text-my-dark-gray text-justify
+						tracking-tight leading-[1.35rem]">
 							{t.rich("page.description", {
 								white: (chunks) => <W>{chunks}</W>,
 								blue: (chunks) => <B dark={true}>{chunks}</B>,
