@@ -36,6 +36,17 @@ export const data = [
                 url: "",
             }
         ]
+    },
+    {
+        id: "test",
+        name: "Test",
+        image: "https://avatars.githubusercontent.com/u/70350599?v=4",
+        social: [
+            {
+                type: "site",
+                url: "",
+            }
+        ]
     }
     
 

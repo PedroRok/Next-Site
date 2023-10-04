@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
-import { MyButton } from "./Buttons";
+import { Hover, MyButton } from "./Buttons";
+import GithubIcon from "@/assets/githubIcon";
+import { useTranslations } from "next-intl";
+import SiteIcon from "@/assets/siteIcon";
 
 export default function Card(props: {
 	title: string;
@@ -17,6 +20,7 @@ export default function Card(props: {
 
 	const [usingWriter, setUsingWriter] = useState(false);
 	const [typewriter, setTypeWriter] = useState(<></>);
+	const t = useTranslations();
 
 	useEffect(() => {
 		if (usingWriter) {
@@ -84,13 +88,25 @@ export default function Card(props: {
 							{typewriter}
 						</div>
 						{usingWriter ? (
-							<MyButton
-								buttonName="Código"
-								className={clsx(
-									"mt-3 transition-all duration-500",
-									showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
-								)}
-							/>
+							<div className={clsx("flex", props.right ? "" : "justify-end")}>
+	
+								<MyButton
+									className={clsx(
+										"mt-2 transition-all duration-500",
+										showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
+									)}
+								>
+									<GithubIcon strokeWidth={2.2}/>
+								</MyButton>
+								<MyButton
+									className={clsx(
+										"mt-2 transition-all duration-500",
+										showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
+									)}
+								>
+									<SiteIcon/>
+								</MyButton>
+							</div>
 						) : (
 							<span
 								onClick={() => setUsingWriter(true)}
@@ -99,7 +115,7 @@ export default function Card(props: {
 									usingWriter ? "opacity-0" : "opacity-100"
 								)}
 							>
-								Ler mais...
+								{t("misc.see_more")}...
 							</span>
 						)}
 					</div>

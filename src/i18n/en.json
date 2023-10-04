@@ -6,6 +6,9 @@
 		"description": "Hey, how's it going? My name is <white>Pedro Lucas</white>, but you can call me <white>Rok</white>. I've been programming since 2019, and it's been my passion ever since. I have a total of <blue><waka></waka></blue> of programming under my belt. I'm pursuing a degree in <white>Computer Science</white> at <white>UFES</white>, worked with prominent Brazilian YouTubers, and currently, I'm part of the <blue><authentic></authentic></blue> team.",
 		"feedback": "REVIEWS"
 	},
+	"projects": {
+		"title": "PROJECT"
+	},
 	"misc": {
 		"see_more": "See More",
 		"see_less": "See Less",
@@ -17,12 +20,16 @@
 	},
 	"reviews": {
 		"marco": {
-			"about": "Youtuber e Businessman",
+			"about": "Youtuber and Businessman",
 			"review": "Lorem ipsum sit dolor amet"
 		},
 		"template": {
-			"about": "Sobre",
+			"about": "About",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+		},
+		"test": {
+			"about": "About",
+			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
 		}
 	}	
 }

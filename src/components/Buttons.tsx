@@ -1,8 +1,6 @@
 import clsx from "clsx";
-import { link } from "fs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 export const NavButton = (props: { children: React.ReactNode; link: string }) => {
 	const path = usePathname().replace("en/","").replace("en", "");
@@ -56,7 +54,7 @@ export const MyButton = (
 }) => {
 	return (
 		<div className={`${props.className}`}>
-			<a href={props.link} target="_blank" className="cursor-pointer inline-flex scale-90 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200"
+			<a href={props.link} target="_blank" className="cursor-pointer inline-flex scale-90 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200"
 			>
 				{props.buttonName}
 				{props.children}
@@ -64,6 +62,7 @@ export const MyButton = (
 		</div>
 	);
 };
+
 
 const Line = (props: { show?: boolean; className?: string }) => {
 	return (
@@ -81,7 +80,7 @@ export const Hover = (props: { children: React.ReactNode }) => {
 	return (
 		<div className="absolute border-r bg-slate-950 border rounded-md opacity-75 p-1 py-[0.5rem] border-my-shadow-blue border-opacity-75 -translate-y-12 text-ellipsis">
 			<div className="truncate text-slate-50 font-trip">{props.children}</div>
-			<div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-blue border-opacity-75" />
+			<div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-shadow-blue border-opacity-75" />
 		</div>
 	);
 };

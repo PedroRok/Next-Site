@@ -6,6 +6,9 @@
 		"description": "Opa, tudo bem? Meu nome é <white>Pedro Lucas</white>, mas pode me chamar de <white>Rok</white>, programo desde 2019 e desde então isso tem sido minha paixão. Programando, tenho um total de <blue><waka></waka></blue> contabilizados, faço <white>Ciência da Computação</white> na <white>UFES</white>, trabalhei com grandes Youtubers Brasileiros e atualmente estou trabalhando na equipe <blue><authentic></authentic></blue>.",
 		"feedback": "AVALIAÇÕES"
 	},
+	"projects": {
+		"title": "PROJETO"
+	},
 	"misc": {
 		"see_more": "Ver mais",
 		"see_less": "Ver menos",
@@ -21,6 +24,10 @@
 			"review": "Lorem ipsum sit dolor amet"
 		},
 		"template": {
+			"about": "Sobre",
+			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+		},
+		"test": {
 			"about": "Sobre",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
 		}

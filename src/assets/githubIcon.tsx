@@ -1,4 +1,4 @@
-export default function githubIcon() {
+export default function githubIcon(props: {strokeWidth?: number}) {
 	return (
 		<div className="max-h-20">
 			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -7,7 +7,7 @@ export default function githubIcon() {
 					stroke="currentColor"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-					strokeWidth="1.5"
+					strokeWidth={props.strokeWidth || "1.5"}
 				>
 					<path
 						strokeDasharray="30"

@@ -1,10 +1,12 @@
 "use client";
 
 import Card from "@components/Card";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function Projects() {
-	const [active, setActive] = useState(false);
+	const [active, setActive] = useState(false)
+	const t = useTranslations()
 
 	return (
 		<div
@@ -20,7 +22,7 @@ export default function Projects() {
 						<span
 							className={`tracking-[1rem] ${active ? "tracking-[2rem]" : ""} transition-all duration-1000`}
 						>
-							PROJETO
+							{t("projects.title")}
 						</span>
 						<span className="transition-all duration-1000">S</span>
 					</h1>
