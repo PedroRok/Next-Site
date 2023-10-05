@@ -18,12 +18,12 @@ export default function Card(props: { title: string; review: string; desc: strin
 				src={props.image}
 				alt="avatar"
 			/>
-			<div className="self-center w-[20rem]">
-				<h1 className="text-3xl truncate">{props.title}</h1>
-				<h3 className="text-sm opacity-75">{clsx("-", props.desc)}</h3>
-				<h2 className="overflow-auto font-sans text-xl max-h-[3.9rem]">{props.review}</h2>
+			<div className="self-center w-[10rem] sm:w-[20rem]">
+				<h1 className="text-2xl sm:text-3xl truncate">{props.title}</h1>
+				<h3 className="text-xs sm:text-sm opacity-75">{clsx("-", props.desc)}</h3>
+				<h2 className="overflow-auto font-sans text-base sm:text-xl max-h-[3.0rem] sm:max-h-[3.9rem]">{props.review}</h2>
 
-				<div className="mt-3 flex">
+				<div className="sm:mt-3 flex scale-80 sm:scale-100">
 					{socials}
 				</div>
 			</div>

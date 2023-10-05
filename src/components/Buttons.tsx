@@ -54,7 +54,7 @@ export const MyButton = (
 }) => {
 	return (
 		<div className={`${props.className}`}>
-			<a href={props.link} target="_blank" className="cursor-pointer inline-flex scale-90 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200"
+			<a href={props.link} target="_blank" className="cursor-pointer inline-flex scale-90 py-[0.1rem] px-[0.1rem] sm:px-[0.5rem] rounded-lg drop-shadow-glow hover:scale-[105%] opacity-80 hover:opacity-100 transition-all ease-in-out duration-200"
 			>
 				{props.buttonName}
 				{props.children}

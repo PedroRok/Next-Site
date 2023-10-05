@@ -1,6 +1,7 @@
 import { data } from "@/lib/Reviews";
 import { useTranslations } from "next-intl";
 import Card from "./CarouselCard";
+import { useEffect, useState } from "react";
 const Flickity = require("react-flickity-component");
 
 export default function Carousel() {
@@ -23,14 +24,19 @@ export default function Carousel() {
 	return <CardRoll cards={cards} />;
 }
 
+
 const CardRoll = (props: { cards: React.ReactNode[] }) => {
+	const [buttons, setButtons] = useState(false);
+	useEffect(() => {
+		window.innerWidth >= 425 ? setButtons(true) : setButtons(false) ;
+	}, []);
 	return (
 		<Flickity
-			className="relative h-[8rem] select-none outline-none"
+			className="relative w-full sm:h-[13rem] select-none outline-none"
 			options={{
 				initialIndex: 2,
 				wrapAround: true,
-				prevNextButtons: true,
+				prevNextButtons: buttons,
 				autoPlay: 5000
 			}}
 		>
