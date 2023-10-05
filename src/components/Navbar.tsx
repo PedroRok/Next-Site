@@ -6,7 +6,7 @@ import { English, Portuguese } from "@/assets/langIcons";
 import { useLocale, useTranslations } from "next-intl";
 import When from "./When";
 import { selectNextLang } from "@/i18n/settings";
-import {usePathname, useRouter} from "next-intl/client";
+import { usePathname, useRouter } from "next-intl/client";
 import SunIcon from "@/assets/sunIcon";
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<nav className="w-full max-w-[900px]">
+		<nav className="w-full max-w-[850px]">
 			<nav className="flex items-center justify-between pt-3">
 				<a
 					href="/"
@@ -32,17 +32,13 @@ export default function Navbar() {
 						size={0.2}
 						className="fill-my-blue hover:cursor-pointer hover:scale-105 transition-all [--glowing:4px] hover:[--glowing:1px] ease-in-out duration-1000 drop-shadow-glow-blue"
 					/>
-					<div className="transition-all ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[40%] overflow-hidden">
+					<div className="transition-all hidden sm:flex ease-in-out delay-150 duration-1000 font-thin tracking-normal drop-shadow-glow [--glowing-color:#00d2ff77] text-xl w-[0%] group-hover:w-[40%] overflow-hidden ">
 						PedroL.
 					</div>
 				</a>
 				<div>
-					<div
-						className={`
-            relative 
-            flex flex-grow w-full transition duration-500 ease-in-out`}
-					>
-						<div className="flex w-full mr-5 relative flex-row items-center h-full gap-5">
+					<div className="relative flex flex-grow w-full transition duration-500 ease-in-out">
+						<div className="flex w-full mr-5 relative flex-row items-center h-full lg:gap-5">
 							<NavButton link="/">{t("misc.nav.home")}</NavButton>
 							<NavButton link="/projects">{t("misc.nav.projects")}</NavButton>
 							<NavButtonIcon onClick={changeLang}>

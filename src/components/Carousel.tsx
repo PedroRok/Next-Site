@@ -26,7 +26,7 @@ export default function Carousel() {
 const CardRoll = (props: { cards: React.ReactNode[] }) => {
 	return (
 		<Flickity
-			className="relative h-[13rem] select-none outline-none"
+			className="relative h-[8rem] select-none outline-none"
 			options={{
 				initialIndex: 2,
 				wrapAround: true,

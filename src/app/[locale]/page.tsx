@@ -53,10 +53,10 @@ export default function Home() {
 	const t = useTranslations();
 	
 	return (
-		<main className="">
-			<div className="max-w-[850px] h-[35rem] flex">
-				<div className="flex justify-between mt-5 place-items-center text-slate-50">
-					<div className="flex-col max-w-[50%] m-5 animate-fade-in-left">
+		<main className="overflow-hidden lg:overflow-visible">
+			<div className="max-w-[850px] lg:h-[35rem] flex">
+				<div className="flex justify-between mt-5 place-items-center text-slate-50 ">
+					<div className="flex-col md:max-w-[50%] justify-center text-center md:text-left m-5">
 						<h1 className="text-[2.10rem] uppercase">
 							{t.rich("page.title", {
 								blue: (chunks) => <B>{chunks}</B>
@@ -85,18 +85,18 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className="relative h-[30rem] w-[20rem]">
-						<LogoAnimated className="scale-150" />
+					<div className="absolute md:relative h-[30rem] w-[20rem] ">
+						<LogoAnimated className="scale-150 hidden md:flex" />
 					</div>
 				</div>
 			</div>
-			<div className="place-items-center w-[850px] overflow-hidden">
+			<div className="place-items-center lg:w-[850px] overflow-hidden">
 				<div className="flex justify-between place-items-center">
 					<div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
-					<h1 className="m-3 text-4xl font-bold text-my-blue">{t("page.feedback")}</h1>
+					<h1 className="m-3 text-2xl sm:text-4xl font-bold text-my-blue">{t("page.feedback")}</h1>
 					<div className="w-full h-[1px] bg-stone-50 opacity-50 self-center" />
 				</div>
-				<Carousel />
+				{<Carousel />}
 			</div>
 		</main>
 	);

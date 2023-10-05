@@ -14,7 +14,7 @@ export default function Card(props: { title: string; review: string; desc: strin
 	return (
 		<div className="carousel-cell flex justify-center w-[35rem] text-slate-50 overflow-hidden">
 			<img
-				className="relative mr-5 w-[12rem] h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50"
+				className="relative mr-5 w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] p-1 border border-opacity-75 rounded-3xl border-slate-50"
 				src={props.image}
 				alt="avatar"
 			/>

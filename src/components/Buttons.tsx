@@ -8,7 +8,7 @@ export const NavButton = (props: { children: React.ReactNode; link: string }) =>
 		<div className="mt-5 group hover:cursor-pointer">
 			<Link
 				className={clsx(
-					"w-full mx-1 lg:mx-0 lg:my-1 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out",
+					"w-full mx-1 lg:mx-0 lg:my-1 px-2 md:px-3 px-3 py-2 rounded items-center justify-center group-hover:drop-shadow-glow-blue group-hover:text-my-blue transition-all duration-500 ease-in-out text-xs md:text-base lg:text-base",
 					path=== props.link ? "text-my-blue drop-shadow-glow-blue" : "text-white"
 				)}
 				href={props.link}
