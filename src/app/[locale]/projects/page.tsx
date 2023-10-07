@@ -3,13 +3,14 @@
 import { data } from "@/lib/Projects";
 import Card from "@components/Card";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 
 export default function Projects() {
 	const [active, setActive] = useState(false)
 	const t = useTranslations()
 
 	var right = false;
+
 	let cards = data.map((element) => {
 		return (
 			<Card
