@@ -38,7 +38,7 @@ export default function Navbar() {
 				</a>
 				<div>
 					<div className="relative flex flex-grow w-full transition duration-500 ease-in-out">
-						<div className="flex w-full mr-5 relative flex-row items-center h-full lg:gap-5">
+						<div className="flex w-full mr-1 sm:mr-5 relative flex-row items-center h-full lg:gap-5">
 							<NavButton link="/">{t("misc.nav.home")}</NavButton>
 							<NavButton link="/projects">{t("misc.nav.projects")}</NavButton>
 							<NavButtonIcon onClick={changeLang}>

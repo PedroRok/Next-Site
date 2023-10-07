@@ -33,10 +33,9 @@ export function Logo(props: {
 }
 
 export function LogoAnimated(props: { className?: string }) {
-	var langChanged = false;
-	const [started, setStarted] = useState(langChanged);
-	const [removeOld, setRemoveOld] = useState(langChanged);
-	const [fade, setFade] = useState(langChanged);
+	const [started, setStarted] = useState(false);
+	const [removeOld, setRemoveOld] = useState(false);
+	const [fade, setFade] = useState(false);
 
 	function activeFade() {
 		setFade(true);
@@ -59,13 +58,9 @@ export function LogoAnimated(props: { className?: string }) {
 					<Animated className={clsx(started ? "absolute opacity-100" : "opacity-0 absolute hidden")} />
 				</div>
 			</div>
-			<div
-				className={clsx(
-					fade ? "transition-all opacity-100 duration-1000 drop-shadow-glow-blue" : "opacity-0"
-				)}
-			>
-				<VerticalLogo className="absolute" />
-			</div>
+			{fade && (
+				<VerticalLogo className="absolute transition-all duration-1000 drop-shadow-glow-blue animate-fade-in-down" />
+			)}
 		</div>
 	);
 }
@@ -85,7 +80,6 @@ function VerticalLogo(props: { className?: string }) {
 		</svg>
 	);
 }
-
 
 function Started(props: { className?: string }) {
 	return (

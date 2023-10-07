@@ -5,9 +5,7 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
 import { Hover, MyButton } from "./Buttons";
-import GithubIcon from "@/assets/githubIcon";
 import { useTranslations } from "next-intl";
-import SiteIcon from "@/assets/siteIcon";
 import { getSocialMedia } from "./SocialMedia";
 import MinecraftIcon from "@/assets/minecraftIcon";
 
@@ -24,6 +22,9 @@ export default function Card(props: {
 
 	const [usingWriter, setUsingWriter] = useState(false);
 	const [typewriter, setTypeWriter] = useState(<></>);
+
+	const [small, setSmall] = useState(false);
+
 	const t = useTranslations();
 
 	const socials = props.social?.map((element) => {
@@ -42,6 +43,11 @@ export default function Card(props: {
 	});
 
 	useEffect(() => {
+		setSmall(window.innerWidth < 1024);
+		window.addEventListener("resize", () => {
+			setSmall(window.innerWidth < 1024);
+		});
+
 		if (usingWriter) {
 			setTypeWriter(
 				<Typewriter
@@ -66,6 +72,9 @@ export default function Card(props: {
 			? "rotateY(-13deg) rotateX(5deg) rotate(1deg) scaleY(.9) scaleX(.95) translate(-3%) translateY(-3%)"
 			: "rotateY(13deg) rotateX(5deg) rotate(-1deg) scaleY(.9) scaleX(.95) translate(3%) translateY(-8%)"
 	);
+
+	if (small) 
+		transformHover = "rotateY(0deg) rotateX(13deg)  scaleY(.9) scaleX(.95)";
 
 	const imgDiv = (
 		<div
