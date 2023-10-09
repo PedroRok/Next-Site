@@ -36,9 +36,9 @@ export default function Projects() {
 			<div className="group">
 				<div className="flex justify-center mt-5 group-hover:[--glowing:20px] drop-shadow-glow transition-all duration-1000">
 					<Line />
-					<h1 className="flex justify-center text-5xl font-bold text-center font-trip hover:text-my-blue">
+					<h1 className="flex justify-center text-3xl sm:text-5xl font-bold text-center font-trip hover:text-my-blue">
 						<span
-							className={`tracking-[1rem] ${active ? "tracking-[2rem]" : ""} transition-all duration-1000`}
+							className={`tracking-[1rem] ${active ? "sm:tracking-[2rem]" : ""} transition-all duration-1000`}
 						>
 							{t("projects.title")}
 						</span>
@@ -55,7 +55,7 @@ export default function Projects() {
 const Line = () => {
 	return (
 		<div
-			className={`h-[3rem] w-[1px] bg-stone-50  mx-3 transition-all opacity-50 duration-700 scale-[0%] group-hover:bg-my-blue group-hover:scale-[100%]`}
+			className={`sm:h-[3rem] w-[1px] bg-stone-50  mx-3 transition-all opacity-50 duration-700 scale-[0%] group-hover:bg-my-blue group-hover:scale-[100%]`}
 		/>
 	);
 };

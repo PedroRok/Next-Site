@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import Typewriter from "typewriter-effect";
 import clsx from "clsx";
-import { Hover, MyButton } from "./Buttons";
+import { MyButton } from "./Buttons";
 import { useTranslations } from "next-intl";
 import { getSocialMedia } from "./SocialMedia";
 import MinecraftIcon from "@/assets/minecraftIcon";
@@ -84,7 +84,7 @@ export default function Card(props: {
 			onMouseOver={() => setHover(true)}
 		>
 			<div
-				className="relative min-w-[22rem] h-[13.5rem] border border-neutral-400 col-span-1 rounded-3xl"
+				className="relative sm:min-w-[22rem] sm:h-[13.5rem] border border-neutral-400 col-span-1 rounded-3xl"
 				style={{
 					transform: clsx(
 						"perspective(1000px)",
@@ -101,10 +101,10 @@ export default function Card(props: {
 	);
 
 	return (
-		<div className="text-center p-5 min-h-[16rem]">
+		<div className="text-center p-5 min-h-[16rem] mt-10">
 			<div className="grid grid-flow-row lg:grid-flow-col justify-items-center lg:justify-between ">
-				{right || imgDiv}
-				<div className="flex justify-end lg:items-center m-5 max-h-[10.5rem]">
+				{(!small && right) || imgDiv}
+				<div className="flex justify-end lg:items-center m-2 lg:m-5 max-h-[10.5rem]">
 					<div className={clsx(props.right ? "lg:text-left" : "lg:text-right")}>
 						<div className="inline-flex items-center">
 							{props.minecraft && (right || <MinecraftIcon/>)}
@@ -120,7 +120,7 @@ export default function Card(props: {
 							{typewriter}
 						</div>
 						{usingWriter ? (
-							<div className={clsx("flex", props.right ? "" : "justify-end")}>{socials}</div>
+							<div className={clsx("flex", props.right ? "" : "justify-end", small ? "justify-center":"")}>{socials}</div>
 						) : (
 							<span
 								onClick={() => setUsingWriter(true)}
@@ -134,7 +134,7 @@ export default function Card(props: {
 						)}
 					</div>
 				</div>
-				{right && imgDiv}
+				{(!small && right) && imgDiv}
 			</div>
 		</div>
 	);
