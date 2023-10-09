@@ -3,7 +3,7 @@
 import { data } from "@/lib/Projects";
 import Card from "@components/Card";
 import { useTranslations } from "next-intl";
-import { use, useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Projects() {
 	const [active, setActive] = useState(false)
@@ -20,6 +20,8 @@ export default function Projects() {
 				description={t(`projects.list.${element.id}.description`)}
 				right={right = !right}
 				social={element.social}
+				langs={element.langs}
+				libs={element.libs}
 				minecraft={element.minecraft}
 			/>
 		);

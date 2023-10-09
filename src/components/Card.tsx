@@ -8,15 +8,20 @@ import { MyButton } from "./Buttons";
 import { useTranslations } from "next-intl";
 import { getSocialMedia } from "./SocialMedia";
 import MinecraftIcon from "@/assets/minecraftIcon";
+import Lang from "./LangIcon";
 
-export default function Card(props: {
+export interface CardProps {
 	title: string;
 	description: string;
 	image: string;
 	right: boolean;
 	minecraft?: boolean;
+	langs?: string[];
+	libs?: string[];
 	social?: { type: string; url: string }[];
-}) {
+}
+
+export default function Card(props: CardProps) {
 	const [hover, setHover] = useState(false);
 	const [showButton, setShowButton] = useState(false);
 
@@ -27,18 +32,14 @@ export default function Card(props: {
 
 	const t = useTranslations();
 
-	const socials = props.social?.map((element) => {
+	const langs = props.langs?.map((element) => {
 		return (
-			<MyButton
-				className={clsx(
-					"mt-2 transition-all duration-500",
-					showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]"
-				)}
-				key={element.type}
-				link={element.url}
-			>
-				{getSocialMedia(element.type)}
-			</MyButton>
+			<Lang key={element} name={element} />
+		);
+	});
+	const libs = props.libs?.map((element) => {
+		return (
+			<Lang key={element} name={element} green={true} />
 		);
 	});
 
@@ -67,14 +68,27 @@ export default function Card(props: {
 
 	var right: boolean = props.right;
 
+	const socials = props.social?.map((element) => {
+		return (
+			<MyButton
+				className="mt-2 transition-all duration-500 max-h-[6rem]"
+				key={element.type}
+				link={element.url}
+			>
+				{getSocialMedia(element.type)}
+			</MyButton>
+		);
+	});
+
+	const socialOverlay = <div className={clsx("absolute", right ? "right-0" : "")}>{socials}</div>;
+
 	var transformHover = clsx(
 		props.right
 			? "rotateY(-13deg) rotateX(5deg) rotate(1deg) scaleY(.9) scaleX(.95) translate(-3%) translateY(-3%)"
 			: "rotateY(13deg) rotateX(5deg) rotate(-1deg) scaleY(.9) scaleX(.95) translate(3%) translateY(-8%)"
 	);
 
-	if (small) 
-		transformHover = "rotateY(0deg) rotateX(13deg)  scaleY(.9) scaleX(.95)";
+	if (small) transformHover = "rotateY(0deg) rotateX(13deg)  scaleY(.9) scaleX(.95)";
 
 	const imgDiv = (
 		<div
@@ -95,6 +109,7 @@ export default function Card(props: {
 					transition: "all 0.5s ease-in-out"
 				}}
 			>
+				{socialOverlay}
 				<img className="rounded-3xl p-1 max-h-[13.40rem]" src={props.image} alt="Project Display" />
 			</div>
 		</div>
@@ -107,9 +122,9 @@ export default function Card(props: {
 				<div className="flex justify-end lg:items-center m-2 lg:m-5 max-h-[10.5rem]">
 					<div className={clsx(props.right ? "lg:text-left" : "lg:text-right")}>
 						<div className="inline-flex items-center">
-							{props.minecraft && (right || <MinecraftIcon/>)}
+							{props.minecraft && (right || <MinecraftIcon />)}
 							<h2 className="font-semibold tracking-wide font-trip ">{props.title}</h2>
-							{props.minecraft && (right && <MinecraftIcon/>)}
+							{props.minecraft && right && <MinecraftIcon />}
 						</div>
 						<div
 							className={clsx(
@@ -120,7 +135,13 @@ export default function Card(props: {
 							{typewriter}
 						</div>
 						{usingWriter ? (
-							<div className={clsx("flex", props.right ? "" : "justify-end", small ? "justify-center":"")}>{socials}</div>
+							<div
+								className={clsx("flex-col mt-2 transition-all duration-500",
+								showButton ? "opacity-100 max-h-[6rem]" : "opacity-0 max-h-[1rem]", props.right ? "" : "justify-end", small ? "justify-center" : "")}
+							>
+								{langs}
+								{libs}
+							</div>
 						) : (
 							<span
 								onClick={() => setUsingWriter(true)}
@@ -134,7 +155,7 @@ export default function Card(props: {
 						)}
 					</div>
 				</div>
-				{(!small && right) && imgDiv}
+				{!small && right && imgDiv}
 			</div>
 		</div>
 	);

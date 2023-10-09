@@ -6,6 +6,7 @@ import { JSX, useEffect, useState } from "react";
 import clsx from "clsx";
 import { Hover } from "@/components/Buttons";
 import { useTranslations } from "next-intl";
+import Lang from "@/components/LangIcon";
 
 export default function Home() {
 	const [language, setLanguage] = useState<Language | undefined>(undefined);
@@ -29,7 +30,7 @@ export default function Home() {
 		let langs: JSX.Element[] = [];
 		for (let i = 0; i < qtd; i++) {
 			let lg = language?.data[i];
-			langs.push(<Lang key={i} name={lg?.name || undefined} data={lg?.hours + " horas"} />);
+			langs.push(<Lang key={i} name={lg?.name || undefined} data={lg?.hours + " " +t("misc.hours")} />);
 		}
 		return langs;
 	}
@@ -101,29 +102,6 @@ export default function Home() {
 		</main>
 	);
 }
-// <div className="absolute opacity-0 flex group-hover:visible group-hover:opacity-100 transition-all duration-300 text-center w-[100%] -top-5 text-sm overflow-visible">{props.data}</div>
-const Lang = (props: { name?: string; data?: string; green?: boolean; onClick?: () => void }) => {
-	const [hover, setHover] = useState(false);
-
-	return (
-		<div
-			onMouseEnter={() => setHover(true)}
-			onMouseLeave={() => setHover(false)}
-			className="relative inline-flex justify-center group"
-		>
-			{props.data && hover && <Hover>{props.data}</Hover>}
-			<div
-				onClick={props.onClick}
-				className={clsx(
-					"m-1 inline-flex bg-opacity-70 py-[0.1rem] px-[0.5rem] rounded-lg drop-shadow-glow-blue hover:scale-[105%] opacity-75 hover:opacity-100 transition-all ease-in-out duration-200 border font-trip",
-					props.green ? "text-my-green border-my-green" : "text-my-blue border-my-blue"
-				)}
-			>
-				{props.name || "..."}
-			</div>
-		</div>
-	);
-};
 
 const B = (props: { children: React.ReactNode; hover?: string; dark?: boolean }) => {
 	return (

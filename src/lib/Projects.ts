@@ -4,9 +4,21 @@ export const data = [
         image: "https://media.discordapp.net/attachments/1071515485214089266/1159181636110393365/SitePreview.gif",
         social: [
             {
+                type: "site",
+                url: ""
+            },
+            {
                 type: "github",
                 url: "https://github.com/Rexblane/Next-Site"
             }
+        ],
+        langs: [
+            "TypeScript",
+        ],
+        libs: [
+            "Next JS",
+            "React",
+            "Tailwind"
         ]
     },
     {
@@ -15,13 +27,15 @@ export const data = [
         minecraft: true,
         social: [
             {
-                type: "github",
-                url: "https://github.com/Rexblane/Next-Site"
-            },
-            {
                 type: "site",
-                url: ""
+                url: "https://www.curseforge.com/minecraft/mc-mods/theft-mod"
             }
+        ],
+        langs: [
+            "Java"
+        ],
+        libs: [
+            "Forge"
         ]
     },
     {
@@ -32,6 +46,12 @@ export const data = [
                 type: "github",
                 url: "https://github.com/Rexblane/ProcessScheduling"
             }
+        ],
+        langs: [
+            "Java"
+        ],
+        libs: [
+            "Swing"
         ]
     }
 
