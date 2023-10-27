@@ -20,6 +20,34 @@
 			"schedule": {
 				"title": "Process Scheduler",
 				"description": "Final project for the Operating Systems discipline, at UFES. Made in Java, with the aim of simulating process scheduling in an OS."
+			},
+			"soccer": {
+				"title": "Soccer",
+				"description": "A super soccer minigame in vanilla Minecraft, using a ball with very dynamic physics and different ways to interact."
+			},
+			"planehunt": {
+				"title": "PlaneHunt",
+				"description": "An airplane in vanilla Minecraft, created with the premise of being a minigame of 'hunt' for other players. At the request of Doctor Biscoito."
+			},
+			"geleiaphone": {
+				"title": "GPhone",
+				"description": "An Iphone made in vanilla Minecraft, with special applications and features, created at the request of YouTuber Geleia."
+			},
+			"customportals": {
+				"title": "Custom Portals",
+				"description": "Customizable portals in Minecraft, using any block and any size, created at the request of YouTuber Dark."
+			},
+			"fallguys": {
+				"title": "Fallguys Craft",
+				"description": "A customizable plugin, inspired by the interactive objects in FallGuys, created at the request of YouTuber Doctor Biscoito."
+			},
+			"allayhunt": {
+				"title": "Allay Hunt",
+				"description": "A reimagining of Minecraft's Allay, with various new abilities and mechanics. At the request of YouTuber Redzin."
+			},
+			"golemhunt": {
+				"title": "Golem Hunt",
+				"description": "A golem in Minecraft with various abilities and mechanics, with the premise of being a 'hunt' minigame. At the request of YouTuber Redzin."
 			}
 		}
 	},
@@ -29,9 +57,9 @@
 		"footer": "Links and Contact:",
 		"hours": "hours",
 		"nav": {
-		"home": "Home",
-		"projects": "Projects"
-	}
+			"home": "Home",
+			"projects": "Projects"
+		}
 	},
 	"reviews": {
 		"placeholder1": {
@@ -46,5 +74,5 @@
 			"about": "About",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
 		}
-	}	
+	}
 }

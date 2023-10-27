@@ -39,25 +39,21 @@
 				"description": "Um celular feito no Minecraft vanilla, com aplicativos e funcionalidades especiais, feito a pedido do Youtuber Geleia."
 			},
 			"customportals": {
-				"title": "CustomPortals",
+				"title": "Custom Portals",
 				"description": "Portais customizáveis no Minecraft, utilizando qualquer bloco e qualquer tamanho, feito a pedido do Youtuber Dark."
 			},
 			"fallguys": {
-				"title": "FallGuys no Minecraft",
+				"title": "Fallguys Craft",
 				"description": "Um plugin customizavel, inspirado nos objetos interativos do FallGuys, feito a pedido do Youtuber Doutor Biscoito."
 			},			
 			"allayhunt": {
 				"title": "Allay Hunt",
-				"description": "Reimaginação do Allay do Minecraft, como se fosse um caçador de outros jogadores, com várias habilidades e mecânicas novas. A pedido do Youtuber Redzin."
+				"description": "Reimaginação do Allay do Minecraft, com várias habilidades e mecânicas novas. A pedido do Youtuber Redzin."
 			},
 			"golemhunt": {
 				"title": "Golem Hunt",
 				"description": "Um golem no Minecraft com várias habilidades e mecânicas, com a premissa de ser um minigame de \"caçada\" a outros jogadores. A pedido do Youtuber Redzin."
-			},
-			"marioboo": {
-				"title": "Boo do Mario",
-				"description": "Um plugin que adiciona o Boo do Mario no Minecraft, ele perseguirá o jogador quando não estiver sendo observado e crescerá com o tempo, feito a pedido do Youtuber Doutor Biscoito e AuthenticGames."
-			}			
+			}	
 		}
 	},
 	"misc": {

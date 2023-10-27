@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { languages } from "@/i18n/settings";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, AbstractIntlMessages, createTranslator } from "next-intl";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,6 +61,9 @@ export default async function RootLayout({ children, params }: Props) {
 
 	return (
 		<html lang={params.locale}>
+			<Head>
+				<link rel="shortcut icon" href="/icon.ico" />
+			</Head>
 			<body
 				className={clsx(
 					"flex flex-col items-center min-h-screen background select-none",
@@ -70,7 +74,7 @@ export default async function RootLayout({ children, params }: Props) {
 				locale={params.locale} 
 				messages={messages}>
 					<Navbar />
-					<TWHelper />
+					{/*<TWHelper />*/}
 					{children}
 					<Footer />
 				</NextIntlClientProvider>

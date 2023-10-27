@@ -122,7 +122,7 @@ export const data = [
     },
     {
         id: "fallguys",
-        image: "",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1167581798520324156/fallguys.gif",
         minecraft: true,
         social: [
         ],
@@ -168,26 +168,7 @@ export const data = [
             "Bukkit",
             "Paper"
         ]
-    },
-    {
-        id: "marioboo",
-        minecraft: true,
-        image: "",
-        social: [
-            {
-                type: "youtube",
-                url: "https://youtu.be/jGIGyQyw7zU?si=0etfWTIfeSqXeeba"
-            }
-        ],
-        langs: [
-            "Java"
-        ],
-        libs: [
-            "Spigot",
-            "Bukkit",
-            "Paper"
-        ]
-    },
+    }
 
 
 
