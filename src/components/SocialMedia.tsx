@@ -3,8 +3,9 @@ import InstagramIcon from "@/assets/instagramIcon";
 import SiteIcon from "@/assets/siteIcon";
 import TwitterIcon from "@/assets/twitterIcon";
 import YoutubeIcon from "@/assets/youtubeIcon";
+import DiscordIcon from "@/assets/discordIcon";
 
-export function getSocialMedia(key: string) {
+export function getSocialMedia(key: string, animated?:boolean) {
     switch (key) {
         case "twitter":
             return <TwitterIcon/>
@@ -15,7 +16,9 @@ export function getSocialMedia(key: string) {
         case "site":
             return <SiteIcon/>
         case "github":
-            return <GithubIcon strokeWidth={2.2}/>
+            return <GithubIcon strokeWidth={2.2} animated={animated}/>
+        case "discord":
+            return <DiscordIcon animated={animated}/>
             
     }
 }

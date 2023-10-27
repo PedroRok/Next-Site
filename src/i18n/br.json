@@ -15,17 +15,54 @@
 			},
 			"theft": {
 				"title": "Mod do Ladrão",
-				"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+				"description": "Um mod feito para a série do Youtuber ForeverPlayer, que adiciona um sistema de roubo de itens no Minecraft."
 			},
 			"schedule": {
 				"title": "Escalonamento de Processos",
 				"description": "Projeto para conclusão da matéria de Sistemas Operacionais, pela UFES. Feito em Java, com o objetivo de simular o escalonamento de processos em um SO."
-			}
+			},
+
+
+
+
+
+			"soccer": {
+				"title": "Futebol",
+				"description": "Um super minigame de futebol no Minecraft vanilla, utilizando uma bola com fisica muito dinâmica e formas diferentes de interagir."
+			},			
+			"planehunt": {
+				"title": "PlaneHunt",
+				"description": "Um avião no Minecraft vanilla, feito com a premissa de ser um minigame de \"caçada\" a outros jogadores. A pedido de Doutor Biscoito"
+			},
+			"geleiaphone": {
+				"title": "GPhone",
+				"description": "Um celular feito no Minecraft vanilla, com aplicativos e funcionalidades especiais, feito a pedido do Youtuber Geleia."
+			},
+			"customportals": {
+				"title": "CustomPortals",
+				"description": "Portais customizáveis no Minecraft, utilizando qualquer bloco e qualquer tamanho, feito a pedido do Youtuber Dark."
+			},
+			"fallguys": {
+				"title": "FallGuys no Minecraft",
+				"description": "Um plugin customizavel, inspirado nos objetos interativos do FallGuys, feito a pedido do Youtuber Doutor Biscoito."
+			},			
+			"allayhunt": {
+				"title": "Allay Hunt",
+				"description": "Reimaginação do Allay do Minecraft, como se fosse um caçador de outros jogadores, com várias habilidades e mecânicas novas. A pedido do Youtuber Redzin."
+			},
+			"golemhunt": {
+				"title": "Golem Hunt",
+				"description": "Um golem no Minecraft com várias habilidades e mecânicas, com a premissa de ser um minigame de \"caçada\" a outros jogadores. A pedido do Youtuber Redzin."
+			},
+			"marioboo": {
+				"title": "Boo do Mario",
+				"description": "Um plugin que adiciona o Boo do Mario no Minecraft, ele perseguirá o jogador quando não estiver sendo observado e crescerá com o tempo, feito a pedido do Youtuber Doutor Biscoito e AuthenticGames."
+			}			
 		}
 	},
 	"misc": {
-		"see_more": "Ver mais",
-		"see_less": "Ver menos",
+		"see_more": "Ver mais...",
+		"see_less": "Ver menos...",
 		"footer": "Links e Contato:",
 		"hours": "horas",
 		"nav": {
@@ -34,15 +71,15 @@
 		}
 	},
 	"reviews": {
-		"marco": {
-			"about": "Youtuber e Empresário",
+		"placeholder1": {
+			"about": "Sobre",
 			"review": "Lorem ipsum sit dolor amet"
 		},
-		"template": {
+		"placeholder2": {
 			"about": "Sobre",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
 		},
-		"test": {
+		"placeholder3": {
 			"about": "Sobre",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
 		}

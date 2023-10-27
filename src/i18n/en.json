@@ -24,8 +24,8 @@
 		}
 	},
 	"misc": {
-		"see_more": "See More",
-		"see_less": "See Less",
+		"see_more": "See More...",
+		"see_less": "See Less...",
 		"footer": "Links and Contact:",
 		"hours": "hours",
 		"nav": {
@@ -34,15 +34,15 @@
 	}
 	},
 	"reviews": {
-		"marco": {
-			"about": "Youtuber and Businessman",
+		"placeholder1": {
+			"about": "About",
 			"review": "Lorem ipsum sit dolor amet"
 		},
-		"template": {
+		"placeholder2": {
 			"about": "About",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
 		},
-		"test": {
+		"placeholder3": {
 			"about": "About",
 			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
 		}

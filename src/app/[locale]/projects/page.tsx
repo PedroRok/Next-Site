@@ -1,12 +1,15 @@
 "use client";
 
+import { MyButton } from "@/components/Buttons";
 import { data } from "@/lib/Projects";
 import Card from "@components/Card";
+import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function Projects() {
 	const [active, setActive] = useState(false)
+	const [qtd, setQtd] = useState(3)
 	const t = useTranslations()
 
 	var right = false;
@@ -26,7 +29,12 @@ export default function Projects() {
 			/>
 		);
 	})
+	let cardsSize = cards.length
+	cards = cards.slice(0, qtd)
 
+	function seeMore() {
+		setQtd(qtd + 3)
+	}
 
 	return (
 		<div
@@ -50,6 +58,15 @@ export default function Projects() {
 				</div>
 			</div>
 			{cards}
+			<div className="flex justify-center">
+				<MyButton 
+				onClick={() => {
+					seeMore()
+				}}
+				className="text-xl animate-pulse hover:animate-none"
+				>{qtd >= cardsSize ? "" : t("misc.see_more")}
+				</MyButton>
+			</div>
 		</div>
 	);
 }

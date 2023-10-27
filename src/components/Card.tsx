@@ -71,16 +71,16 @@ export default function Card(props: CardProps) {
 	const socials = props.social?.map((element) => {
 		return (
 			<MyButton
-				className="mt-2 transition-all duration-500 max-h-[6rem]"
+				className="mt-2 transition-all duration-500 max-h-[6rem] drop-shadow-sm"
 				key={element.type}
 				link={element.url}
 			>
-				{getSocialMedia(element.type)}
+				{getSocialMedia(element.type, false)}
 			</MyButton>
 		);
 	});
 
-	const socialOverlay = <div className={clsx("absolute", right ? "right-0" : "")}>{socials}</div>;
+	const socialOverlay = <div className={clsx("absolute mr-2 sm:mr-0", right || small ? "right-0" : "")}>{socials}</div>;
 
 	var transformHover = clsx(
 		props.right
@@ -122,9 +122,9 @@ export default function Card(props: CardProps) {
 				<div className="flex justify-end lg:items-center m-2 lg:m-5 max-h-[10.5rem]">
 					<div className={clsx(props.right ? "lg:text-left" : "lg:text-right")}>
 						<div className="inline-flex items-center">
-							{props.minecraft && (right || <MinecraftIcon />)}
+							{props.minecraft && (!small && (right || <MinecraftIcon />))}
 							<h2 className="font-semibold tracking-wide font-trip ">{props.title}</h2>
-							{props.minecraft && right && <MinecraftIcon />}
+							{props.minecraft && (small || right) && <MinecraftIcon />}
 						</div>
 						<div
 							className={clsx(
@@ -150,7 +150,7 @@ export default function Card(props: CardProps) {
 									usingWriter ? "opacity-0" : "opacity-100"
 								)}
 							>
-								{t("misc.see_more")}...
+								{t("misc.see_more")}
 							</span>
 						)}
 					</div>

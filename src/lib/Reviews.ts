@@ -1,22 +1,22 @@
 export const data = [
     {
-        id: "marco",
+        id: "placeholder1",
         name: "Review 1",
         image: "https://avatars.githubusercontent.com/u/70350599?v=4",
         social: [
             {
                 type: "youtube",
-                url: "https://www.youtube.com/@AuthenticGames"
+                url: ""
             },
             {
                 type: "instagram",
-                url: "https://www.instagram.com/marcotulioc_/",
+                url: "",
             }
         ]
     },
     {
-        id: "template",
-        name: "Template",
+        id: "placeholder2",
+        name: "Review 2",
         image: "https://avatars.githubusercontent.com/u/70350599?v=1",
         social: [
             {
@@ -38,8 +38,8 @@ export const data = [
         ]
     },
     {
-        id: "test",
-        name: "Test",
+        id: "placeholder3",
+        name: "Review 3",
         image: "https://avatars.githubusercontent.com/u/70350599?v=2",
         social: [
             {

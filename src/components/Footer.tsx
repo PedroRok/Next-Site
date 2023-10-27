@@ -17,7 +17,7 @@ export default function Footer() {
 						{t("misc.footer")}
 					</span>
 					<FooterButton link="https://github.com/Rexblane">
-						<GithubIcon />
+						<GithubIcon animated={true} />
 					</FooterButton>
 					<FooterButton link="https://discordapp.com/users/210534961843798016">
 						<DiscordIcon />
