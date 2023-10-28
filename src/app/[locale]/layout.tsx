@@ -43,7 +43,7 @@ export async function generateMetadata({params} : Props) {
 	return {
 		title: t("title"),
 		description: t("description"),
-		image: "https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png"
+		Image: "https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png"
 	};
 }
 
@@ -69,7 +69,7 @@ export default async function RootLayout({ children, params }: Props) {
 			</Head>
 			<body
 				className={clsx(
-					"flex flex-col items-center min-h-screen background select-none",
+					"flex flex-col items-center min-h-screen background select-none bg-black",
 					inter.className
 				)}
 			>
