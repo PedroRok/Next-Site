@@ -42,8 +42,7 @@ export async function generateMetadata({params} : Props) {
 
 	return {
 		title: t("title"),
-		description: t("description"),
-		Image: "https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png"
+		description: t("description")
 	};
 }
 
