@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, AbstractIntlMessages, createTranslator } from "next-intl";
 import Head from "next/head";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -57,12 +58,18 @@ export default async function RootLayout({ children, params }: Props) {
 	} catch (error) {
 		notFound();
 	}
-
+	
 
 	return (
 		<html lang={params.locale}>
 			<Head>
 				<link rel="shortcut icon" href="/icon.ico" />
+				<meta name="darkreader-lock"/>
+				<meta content="Pedro Rok Portfólio" property="og:title" />
+				<meta content="Meu portfólio pessoal, onde mostro quem sou eu e alguns projetos que já fiz." property="og:description" />
+				<meta content="https://pedrorok.com" property="og:url" />
+				<meta content="https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png" property="og:image" />
+				<meta content="#00d2ff" data-react-helmet="true" name="theme-color" />
 			</Head>
 			<body
 				className={clsx(
