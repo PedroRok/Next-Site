@@ -42,7 +42,8 @@ export async function generateMetadata({params} : Props) {
 
 	return {
 		title: t("title"),
-		description: t("description")
+		description: t("description"),
+		image: "https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png"
 	};
 }
 
@@ -65,11 +66,6 @@ export default async function RootLayout({ children, params }: Props) {
 			<Head>
 				<link rel="shortcut icon" href="/icon.ico" />
 				<meta name="darkreader-lock"/>
-				<meta content="Pedro Rok Portfólio" property="og:title" />
-				<meta content="Meu portfólio pessoal, onde mostro quem sou eu e alguns projetos que já fiz." property="og:description" />
-				<meta content="https://pedrorok.com" property="og:url" />
-				<meta content="https://media.discordapp.net/attachments/1071515485214089266/1167915837252976722/transparente.png" property="og:image" />
-				<meta content="#00d2ff" data-react-helmet="true" name="theme-color" />
 			</Head>
 			<body
 				className={clsx(
