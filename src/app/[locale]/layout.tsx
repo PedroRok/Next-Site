@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, AbstractIntlMessages, createTranslator } from "next-intl";
 import Head from "next/head";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -57,16 +58,17 @@ export default async function RootLayout({ children, params }: Props) {
 	} catch (error) {
 		notFound();
 	}
-
+	
 
 	return (
 		<html lang={params.locale}>
 			<Head>
 				<link rel="shortcut icon" href="/icon.ico" />
+				<meta name="darkreader-lock"/>
 			</Head>
 			<body
 				className={clsx(
-					"flex flex-col items-center min-h-screen background select-none",
+					"flex flex-col items-center min-h-screen background select-none bg-black",
 					inter.className
 				)}
 			>

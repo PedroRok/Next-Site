@@ -8,12 +8,14 @@ import { Hover } from "@/components/Buttons";
 import { useTranslations } from "next-intl";
 import Lang from "@/components/LangIcon";
 
+
 export default function Home() {
 	const [language, setLanguage] = useState<Language | undefined>(undefined);
 	const [activity, setActivity] = useState<CodingActivity | undefined>(undefined);
 	const [more, setMore] = useState(false);
 	
 	useEffect(() => {
+
 		async function getLangs() {
 			const data = await dataLang();
 			setLanguage(data);
