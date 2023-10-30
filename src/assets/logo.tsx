@@ -94,5 +94,5 @@ function Started(props: { className?: string }) {
 }
 
 function Animated(props: { className?: string }) {
-	return <object data="img/LOGO.svg" className={props.className} type="image/svg+xml"></object>;
+	return <object title="logo" data="img/LOGO.svg" className={props.className} type="image/svg+xml"></object>;
 }
