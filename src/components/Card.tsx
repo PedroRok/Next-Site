@@ -98,7 +98,7 @@ export default function Card(props: CardProps) {
 			onMouseOver={() => setHover(true)}
 		>
 			<div
-				className="relative sm:min-w-[22rem] sm:h-[13.5rem] border border-neutral-400 col-span-1 rounded-3xl"
+				className="relative min-w-[22rem] h-[13.5rem] border border-neutral-400 col-span-1 rounded-3xl"
 				style={{
 					transform: clsx(
 						"perspective(1000px)",
