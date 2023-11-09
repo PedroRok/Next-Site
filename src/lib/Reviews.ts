@@ -1,50 +1,74 @@
 export const data = [
     {
-        id: "placeholder1",
-        name: "Review 1",
-        image: "https://avatars.githubusercontent.com/u/70350599?v=4",
+        id: "spok",
+        name: "Andrei Soares",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1172229397344952490/spok.jpg",
         social: [
             {
                 type: "youtube",
-                url: ""
+                url: "https://www.youtube.com/@spok"
             },
             {
                 type: "instagram",
-                url: "",
-            }
-        ]
-    },
-    {
-        id: "placeholder2",
-        name: "Review 2",
-        image: "https://avatars.githubusercontent.com/u/70350599?v=1",
-        social: [
-            {
-                type: "youtube",
-                url: ""
-            },
-            {
-                type: "instagram",
-                url: "",
+                url: "https://www.instagram.com/spoktc/",
             },
             {
                 type: "twitter",
-                url: "",
+                url: "https://twitter.com/thecreepersbr",
             },
             {
-                type: "site",
-                url: "",
+                type: "facebook",
+                url: "https://www.facebook.com/gaming/thecreepersbr",
             }
         ]
     },
     {
-        id: "placeholder3",
-        name: "Review 3",
-        image: "https://avatars.githubusercontent.com/u/70350599?v=2",
+        id: "arteque",
+        name: "Paulo Arteque",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1172231261801152532/file.png",
         social: [
             {
-                type: "site",
-                url: "",
+                type: "youtube",
+                url: "https://www.youtube.com/channel/UCNl7ym44XSi5jCbb_OOey1w"
+            },
+            {
+                type: "instagram",
+                url: "https://www.instagram.com/pauloarteque/",
+            },
+            {
+                type: "twitter",
+                url: "https://x.com/pauloarteque?s=20",
+            },
+            {
+                type: "twitch",
+                url: "https://www.twitch.tv/arteque",
+            },
+            {
+                type: "tiktok",
+                url: "https://www.tiktok.com/@arteque"
+            }
+        ]
+    },
+    {
+        id: "marco",
+        name: "Marco Túlio",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1172234764879671348/marco.png",
+        social: [
+            {
+                type: "youtube",
+                url: "https://www.youtube.com/@AuthenticGames"
+            },
+            {
+                type: "instagram",
+                url: "https://www.instagram.com/mar.covieira/",
+            },
+            {
+                type: "twitter",
+                url: "https://twitter.com/AuthenticGames",
+            },
+            {
+                type: "tiktok",
+                url: "https://www.tiktok.com/@authenticgames"
             }
         ]
     }

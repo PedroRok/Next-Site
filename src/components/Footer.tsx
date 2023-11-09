@@ -1,5 +1,5 @@
 "use client";
-import DiscordIcon from "@/assets/discordIcon";
+import DiscordIcon from "@/assets/social/discordIcon";
 import { FooterButton, NavButtonIcon } from "./Buttons";
 import GithubIcon from "@/assets/githubIcon";
 import EmailIcon from "@/assets/emailIcon";
