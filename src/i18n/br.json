@@ -67,17 +67,17 @@
 		}
 	},
 	"reviews": {
-		"placeholder1": {
-			"about": "Sobre",
-			"review": "Lorem ipsum sit dolor amet"
+		"spok": {
+			"about": "Influencer \"Spok\"",
+			"review": "Trabalhar com o Rok foi algo que me deixou muito confortável e confiei no trabalho, soube resolver meu problema facilmente, e o melhor de tudo foi o rápido suporte que eu tive, em poucos minutos ja tinha uma resposta."
 		},
-		"placeholder2": {
-			"about": "Sobre",
-			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iusto vel ipsum doloribus. Atque, corrupti!"
+		"arteque": {
+			"about": "Influencer e Streamer",
+			"review": "Trabalho excelente e dentro do prazo, entregou até mais do que foi pedido, ótimo profissional!"
 		},
-		"placeholder3": {
-			"about": "Sobre",
-			"review": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, corrupti!"
+		"marco": {
+			"about": "Influencer e Empresário \"AuthenticGames\"",
+			"review": "..."
 		}
 	}
 }
