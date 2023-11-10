@@ -50,6 +50,33 @@ export const data = [
         ]
     },
     {
+        id: "onerb",
+        name: "Breno Augusto",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1172616323541508206/326869659_218589987233079_7585029205858624309_n.jpg",
+        social: [
+            {
+                type: "youtube",
+                url: "https://www.youtube.com/OnerbYT"
+            },
+            {
+                type: "instagram",
+                url: "https://www.instagram.com/onerbb_/",
+            },
+            {
+                type: "twitter",
+                url: "https://twitter.com/Onerb_br",
+            },
+            {
+                type: "twitch",
+                url: "https://www.twitch.tv/onerb_br",
+            },
+            {
+                type: "tiktok",
+                url: "https://www.tiktok.com/@onerb_br"
+            }
+        ]
+    },
+    {
         id: "marco",
         name: "Marco Túlio",
         image: "https://media.discordapp.net/attachments/1071515485214089266/1172234764879671348/marco.png",
