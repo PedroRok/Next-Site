@@ -9,7 +9,7 @@ export const data = [
             },
             {
                 type: "github",
-                url: "https://github.com/Rexblane/Next-Site"
+                url: "https://github.com/PedroRok/Next-Site"
             }
         ],
         langs: [
@@ -44,7 +44,7 @@ export const data = [
         social: [
             {
                 type: "github",
-                url: "https://github.com/Rexblane/ProcessScheduling"
+                url: "https://github.com/PedroRok/ProcessScheduling"
             }
         ],
         langs: [

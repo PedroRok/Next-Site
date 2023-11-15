@@ -50,6 +50,29 @@ export const data = [
         ]
     },
     {
+        id: "marco",
+        name: "Marco Túlio",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1172234764879671348/marco.png",
+        social: [
+            {
+                type: "youtube",
+                url: "https://www.youtube.com/@AuthenticGames"
+            },
+            {
+                type: "instagram",
+                url: "https://www.instagram.com/mar.covieira/",
+            },
+            {
+                type: "twitter",
+                url: "https://twitter.com/AuthenticGames",
+            },
+            {
+                type: "tiktok",
+                url: "https://www.tiktok.com/@authenticgames"
+            }
+        ]
+    },
+    {
         id: "onerb",
         name: "Breno Augusto",
         image: "https://media.discordapp.net/attachments/1071515485214089266/1172616323541508206/326869659_218589987233079_7585029205858624309_n.jpg",
@@ -73,29 +96,6 @@ export const data = [
             {
                 type: "tiktok",
                 url: "https://www.tiktok.com/@onerb_br"
-            }
-        ]
-    },
-    {
-        id: "marco",
-        name: "Marco Túlio",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1172234764879671348/marco.png",
-        social: [
-            {
-                type: "youtube",
-                url: "https://www.youtube.com/@AuthenticGames"
-            },
-            {
-                type: "instagram",
-                url: "https://www.instagram.com/mar.covieira/",
-            },
-            {
-                type: "twitter",
-                url: "https://twitter.com/AuthenticGames",
-            },
-            {
-                type: "tiktok",
-                url: "https://www.tiktok.com/@authenticgames"
             }
         ]
     }
