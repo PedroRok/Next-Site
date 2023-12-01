@@ -1,15 +1,13 @@
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import TWHelper from "@/components/TWHelper";
 import clsx from "clsx";
 import Footer from "@/components/Footer";
 import { languages } from "@/i18n/settings";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, AbstractIntlMessages, createTranslator } from "next-intl";
 import Head from "next/head";
-
+import PlausibleProvider from "next-plausible";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +63,12 @@ export default async function RootLayout({ children, params }: Props) {
 			<Head>
 				<link rel="shortcut icon" href="/icon.ico" />
 				<meta name="darkreader-lock"/>
+				<PlausibleProvider
+					domain="https://pedrorok.com"
+					customDomain="https://analytics.lucasmellof.com"
+					selfHosted
+					trackOutboundLinks
+				/>
 			</Head>
 			<body
 				className={clsx(
