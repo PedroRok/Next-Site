@@ -1,6 +1,8 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import 'react-tooltip/dist/react-tooltip.css';
 
 export const NavButton = (props: { children: React.ReactNode; link: string }) => {
 	const path = usePathname().replace("en/","").replace("en", "");
@@ -20,10 +22,15 @@ export const NavButton = (props: { children: React.ReactNode; link: string }) =>
 	);
 };
 
-export const NavButtonIcon = (props: { children: React.ReactNode; onClick: () => void }) => {
+export const NavButtonIcon = (props: { children: React.ReactNode; onMouseEnter?: () => void; onMouseLeave?: () => void; onClick: () => void }) => {
+	const t = useTranslations();
 	return (
-		<div onClick={props.onClick} className="group mt-[1.125rem] hover:cursor-pointer">
-			<div className="items-center justify-center w-full text-white transition-all duration-500 ease-in-out rounded group-hover:drop-shadow-glow-blue group-hover:text-my-blue">
+	
+		<div 
+		onMouseEnter={props.onMouseEnter}
+		onMouseLeave={props.onMouseLeave}
+		onClick={props.onClick} className="group mt-[1.125rem] hover:cursor-pointer" >
+			<div className="items-center justify-center w-full text-white transition-all duration-500 ease-in-out rounded group-hover:drop-shadow-glow-blue group-hover:text-my-blue" data-tooltip-id="default" data-tooltip-content={t("lang")} >
 				{props.children}
 			</div>
 			{Line({ className: "mt-[1.40rem]" })}
@@ -75,14 +82,5 @@ const Line = (props: { show?: boolean; className?: string }) => {
 				props.show ? "scale-[100%] opacity-100" : "drop-shadow-glow-blue scale-0 opacity-0"
 			)}
 		/>
-	);
-};
-
-export const Hover = (props: { children: React.ReactNode }) => {
-	return (
-		<div className="absolute border-r bg-slate-950 border rounded-md opacity-75 p-1 py-[0.5rem] border-my-shadow-blue border-opacity-75 -translate-y-12 text-ellipsis">
-			<div className="truncate text-slate-50 font-trip">{props.children}</div>
-			<div className="left-[39px] bg-slate-950 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 border-r border-b border-my-shadow-blue border-opacity-75" />
-		</div>
 	);
 };

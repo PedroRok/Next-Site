@@ -71,7 +71,7 @@ export default function Card(props: CardProps) {
 	const socials = props.social?.map((element) => {
 		return (
 			<MyButton
-				className="mt-2 transition-all duration-500 max-h-[6rem] drop-shadow-sm"
+				className="mt-2 transition-all duration-500 max-h-[6rem] drop-shadow-sm rounded-md backdrop-brightness-75"
 				key={element.type}
 				link={element.url}
 			>
@@ -80,7 +80,7 @@ export default function Card(props: CardProps) {
 		);
 	});
 
-	const socialOverlay = <div className={clsx("absolute mr-2 sm:mr-0", right || small ? "right-0" : "")}>{socials}</div>;
+	const socialOverlay = <div className={clsx("absolute mt-1 mr-2 sm:mr-0", right || small ? "right-0" : "")}>{socials}</div>;
 
 	var transformHover = clsx(
 		props.right
