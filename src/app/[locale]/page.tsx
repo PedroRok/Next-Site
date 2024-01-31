@@ -4,9 +4,9 @@ import { LogoAnimated } from "@/assets/logo";
 import Carousel from "@components/Carousel";
 import { JSX, useEffect, useState } from "react";
 import clsx from "clsx";
-import { Hover } from "@/components/Buttons";
 import { useTranslations } from "next-intl";
 import Lang from "@/components/LangIcon";
+import { Tooltip } from "react-tooltip";
 
 
 export default function Home() {
@@ -57,6 +57,14 @@ export default function Home() {
 	
 	return (
 		<main className="overflow-hidden lg:overflow-visible">
+			<Tooltip id="default-top" disableStyleInjection place="top" arrowColor="#00d2ff88" style={{
+				backgroundColor: "#ffffff00",
+				backdropFilter: "blur(0.5rem)",
+				borderRadius: "0.5rem",
+				zIndex: 1000,
+				color: "#00d2ff",
+				boxShadow: "0px 0px 5px #00d2ff",
+			}}/>
 			<div className="max-w-[850px] h-[35rem] flex">
 				<div className="flex justify-between mt-5 place-items-center text-slate-50 ">
 					<div className="flex-col md:max-w-[50%] justify-center text-center md:text-left m-5">
@@ -71,8 +79,8 @@ export default function Home() {
 							{t.rich("page.description", {
 								white: (chunks) => <W>{chunks}</W>,
 								blue: (chunks) => <B dark={true}>{chunks}</B>,
-								waka: () => <L link="https://wakatime.com/@Rok">{getTotalCoded() || "..."}</L>,
-								authentic: () => <L link="https://www.youtube.com/@AuthenticGames">AuthenticGames</L>
+								waka: () => <L link="https://wakatime.com/@Rok" tooltip="Wakatime">{getTotalCoded() || "..."}</L>,
+								brpacks: () => <L link="https://dc.brpacks.net/">Brpacks</L>
 							})}
 						</h2>
 						<div className="mt-4">
@@ -105,10 +113,9 @@ export default function Home() {
 	);
 }
 
-const B = (props: { children: React.ReactNode; hover?: string; dark?: boolean }) => {
+const B = (props: { children: React.ReactNode; dark?: boolean }) => {
 	return (
 		<span className="inline-block group">
-			<div className="relative group">{props.hover && <Hover>{props.hover}</Hover>}</div>
 			<span
 				className={clsx("inline relative group", props.dark ? "text-my-dark-blue" : "text-my-blue")}
 			>
@@ -122,7 +129,7 @@ const W = (props: { children: React.ReactNode }) => {
 	return <span className="text-gray-300">{props.children}</span>;
 };
 
-const L = (props: { link: string; children: React.ReactNode }) => {
+const L = (props: { link: string; children: React.ReactNode; tooltip?: string }) => {
 	return (
 		// TODO REDO THIS
 		<a
@@ -130,6 +137,7 @@ const L = (props: { link: string; children: React.ReactNode }) => {
 			href={props.link}
 			rel="noopener noreferrer"
 			className="relative transition-all duration-200 rounded-lg group"
+			data-tooltip-id="default-top" data-tooltip-content={props.tooltip}
 		>
 			<div className="transition-all duration-700 group-hover:text-slate-50">{props.children}</div>
 			<div className="absolute w-[100%] h-[1px] border-t border-my-dark-blue  scale-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:border-slate-50 group-hover:scale-[100%]  transition-all duration-700 ease-in-out z-0 " />
