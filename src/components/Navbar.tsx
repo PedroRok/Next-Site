@@ -7,13 +7,14 @@ import { useLocale, useTranslations } from "next-intl";
 import When from "./When";
 import { selectNextLang } from "@/i18n/settings";
 import { usePathname, useRouter } from "next-intl/client";
-import SunIcon from "@/assets/sunIcon";
+import { Tooltip } from "react-tooltip";
 
 export default function Navbar() {
 	const locale = useLocale();
 	const router = useRouter();
 	const pathname = usePathname();
 	const t = useTranslations();
+	const [tooltip, setTooltip] = useState(true);
 
 	const changeLang = () => {
 		startTransition(() => {
@@ -21,8 +22,23 @@ export default function Navbar() {
 		});
 	};
 
+	useEffect(() => {
+		setTimeout(() => {
+			setTooltip(false);
+		}, 3000);
+	}, []);
+
+
 	return (
 		<nav className="w-full max-w-[850px]">
+			<Tooltip id="default" defaultIsOpen isOpen={tooltip} disableStyleInjection place="left" arrowColor="#00d2ff88" style={{
+				backgroundColor: "#ffffff00",
+				backdropFilter: "blur(1rem)",
+				borderRadius: "0.5rem",
+				color: "#00d2ff",
+				zIndex: 1000,
+				boxShadow: "0px 0px 5px #00d2ff",
+			}}/>
 			<nav className="flex items-center justify-between pt-3">
 				<a
 					href="/"
@@ -41,7 +57,10 @@ export default function Navbar() {
 						<div className="flex w-full mr-1 sm:mr-5 relative flex-row items-center h-full lg:gap-5">
 							<NavButton link="/">{t("misc.nav.home")}</NavButton>
 							<NavButton link="/projects">{t("misc.nav.projects")}</NavButton>
-							<NavButtonIcon onClick={changeLang}>
+							<NavButtonIcon 
+							onMouseEnter={() => setTooltip(true)}
+							onMouseLeave={() => setTooltip(false)}
+							onClick={changeLang}>
 								<When if={locale === "br"}>
 									<Portuguese />
 								</When>

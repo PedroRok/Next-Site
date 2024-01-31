@@ -21,21 +21,31 @@ export const data = [
             "Tailwind"
         ]
     },
-    {
-        id: "theft",
-        image: "https://media.discordapp.net/attachments/1012521585414000750/1017221663567384576/output.gif",
+    { 
+        id: "tag",
+        image: "https://media.discordapp.net/attachments/1071515485214089266/1201944689851236393/tag-2.gif",
         minecraft: true,
         social: [
             {
-                type: "site",
-                url: "https://www.curseforge.com/minecraft/mc-mods/theft-mod"
+                type: "twitter",
+                url: "https://twitter.com/TheArtequeGames"
+            },
+            {
+                type: "youtube",
+                url: "https://youtu.be/PgIm9L17ILU?si=KDR_doTvssJA9_E7"
+            },
+            {
+                type: "discord",
+                url: "https://discord.gg/XWQe2C4XFv"
             }
         ],
         langs: [
-            "Java"
+            "Java",
         ],
         libs: [
-            "Forge"
+            "Bukkit",
+            "Spigot",
+            "Paper"
         ]
     },
     {
@@ -169,7 +179,4 @@ export const data = [
             "Paper"
         ]
     }
-
-
-
 ];

@@ -1,9 +1,10 @@
 {
 	"title": "Rok's Portfolio",
 	"description": "Welcome to my portfolio! I'm a fullstack developer with a passion for creating beautiful and efficient websites, mods and applications.",
+	"lang": "Mude sua Linguagem",
 	"page": {
 		"title": "<blue>Fullstack</blue> Developer <blue>creative</blue> and <blue>efficient</blue>!",
-		"description": "Hey, how's it going? My name is <white>Pedro Lucas</white>, but you can call me <white>Rok</white>. I've been programming since 2019, and it's been my passion ever since. I have a total of <blue><waka></waka></blue> of programming under my belt. I'm pursuing a degree in <white>Computer Science</white> at <white>UFES</white>, worked with prominent Brazilian YouTubers, and currently, I'm part of the <blue><authentic></authentic></blue> team.",
+		"description": "Hey, how's it going? My name is <white>Pedro Lucas</white>, but you can call me <white>Rok</white>. I've been programming since 2019, and it's been my passion ever since. I have a total of <blue><waka></waka></blue> of programming under my belt. I'm pursuing a degree in <white>Computer Science</white> at <white>UFES</white>, worked with prominent Brazilian YouTubers, and currently, I'm <white>CIO</white> at <blue><brpacks></brpacks></blue>.",
 		"feedback": "REVIEWS"
 	},
 	"projects": {
@@ -12,6 +13,10 @@
 			"my-site": {
 				"title": "My site",
 				"description": "My personal website, made with Next JS, Tailwind and Typescript. It's a simple website, but it's a good example of my work."
+			},
+			"tag": {
+				"title": "The Arteque Games",
+				"description": "A minigames championship in Minecraft with 40 influencers. I worked as the team leader and project developer."
 			},
 			"theft": {
 				"title": "Theft Mod",
@@ -76,7 +81,7 @@
 		},
 		"marco": {
 			"about": "Influencer and Businessman \"AuthenticGames\"",
-			"review": "..."
+			"review": "I worked with Rok for a year, a great professional, very dedicated and a great person."
 		}
 	}
 }
