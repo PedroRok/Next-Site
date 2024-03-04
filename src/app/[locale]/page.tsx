@@ -1,5 +1,5 @@
 "use client";
-import { CodingActivity, LangProps, Language, dataCode, dataLang } from "@/lib/Wakatime";
+import { CodingActivity, Language, dataCode, dataLang } from "@/lib/Wakatime";
 import { LogoAnimated } from "@/assets/logo";
 import Carousel from "@components/Carousel";
 import { JSX, useEffect, useState } from "react";

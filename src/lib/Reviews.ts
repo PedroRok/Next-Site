@@ -2,7 +2,7 @@ export const data = [
     {
         id: "spok",
         name: "Andrei Soares",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1172229397344952490/spok.jpg",
+        image: "img/files/profiles/spok.jpg",
         social: [
             {
                 type: "youtube",
@@ -25,7 +25,7 @@ export const data = [
     {
         id: "arteque",
         name: "Paulo Arteque",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1172231261801152532/file.png",
+        image: "img/files/profiles/arteque.png",
         social: [
             {
                 type: "youtube",
@@ -52,7 +52,7 @@ export const data = [
     {
         id: "marco",
         name: "Marco Túlio",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1172234764879671348/marco.png",
+        image: "img/files/profiles/marco.png",
         social: [
             {
                 type: "youtube",
@@ -75,7 +75,7 @@ export const data = [
     {
         id: "onerb",
         name: "Breno Augusto",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1172616323541508206/326869659_218589987233079_7585029205858624309_n.jpg",
+        image: "img/files/profiles/onerb.jpg",
         social: [
             {
                 type: "youtube",

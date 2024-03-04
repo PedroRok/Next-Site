@@ -3,7 +3,6 @@
 import { MyButton } from "@/components/Buttons";
 import { data } from "@/lib/Projects";
 import Card from "@components/Card";
-import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
