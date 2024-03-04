@@ -1,7 +1,7 @@
 export const data = [
     {
         id: "my-site",
-        image: "img/files/projects/SitePreview.gif",
+        image: "https://i.imgur.com/XQB3kqB.gif",
         social: [
             {
                 type: "site",
@@ -23,7 +23,7 @@ export const data = [
     },
     { 
         id: "tag",
-        image: "img/files/projects/tag-2.gif",
+        image: "https://i.imgur.com/MXeTle8.gif",
         minecraft: true,
         social: [
             {
@@ -50,7 +50,7 @@ export const data = [
     },
     {
         id: "schedule",
-        image: "img/files/projects/ProcessScheduling.gif",
+        image: "https://i.imgur.com/7aTWOUh.gif",
         social: [
             {
                 type: "github",
@@ -66,7 +66,7 @@ export const data = [
     },
     {
         id: "soccer",
-        image: "img/files/projects/soccer.gif",
+        image: "https://i.imgur.com/22OykhN.gif",
         minecraft: true,
         social: [
         ],
@@ -81,7 +81,7 @@ export const data = [
     },
     {
         id: "planehunt",
-        image: "img/files/projects/plane.gif",
+        image: "https://i.imgur.com/RNZpVy5.gif",
         minecraft: true,
         social: [
             {
@@ -100,7 +100,7 @@ export const data = [
     },
     {
         id: "geleiaphone",
-        image: "img/files/projects/gphone.gif",
+        image: "https://i.imgur.com/WUKDiOf.gif",
         minecraft: true,
         social: [
             {
@@ -119,7 +119,7 @@ export const data = [
     },
     {
         id: "customportals",
-        image: "img/files/projects/portals.gif",
+        image: "https://i.imgur.com/uFHx1NS.gif",
         minecraft: true,
         social: [
         ],
@@ -132,7 +132,7 @@ export const data = [
     },
     {
         id: "fallguys",
-        image: "img/files/projects/fallguys.gif",
+        image: "https://i.imgur.com/G1HBbtd.gif",
         minecraft: true,
         social: [
         ],
@@ -147,7 +147,7 @@ export const data = [
     },
     {
         id: "allayhunt",
-        image: "img/files/projects/Allay.gif",
+        image: "https://i.imgur.com/x0fKHwo.gif",
         minecraft: true,
         social: [
             {
@@ -166,7 +166,7 @@ export const data = [
     },
     {
         id: "golemhunt",
-        image: "img/files/projects/golem.gif",
+        image: "https://i.imgur.com/CT3vXv5.gif",
         minecraft: true,
         social: [
         ],
