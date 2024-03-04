@@ -1,7 +1,7 @@
 export const data = [
     {
         id: "my-site",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1159181636110393365/SitePreview.gif",
+        image: "img/files/projects/SitePreview.gif",
         social: [
             {
                 type: "site",
@@ -23,7 +23,7 @@ export const data = [
     },
     { 
         id: "tag",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1201944689851236393/tag-2.gif",
+        image: "img/files/projects/tag-2.gif",
         minecraft: true,
         social: [
             {
@@ -50,7 +50,7 @@ export const data = [
     },
     {
         id: "schedule",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1159194220389748887/ProcessScheduling.gif",
+        image: "img/files/projects/ProcessScheduling.gif",
         social: [
             {
                 type: "github",
@@ -66,7 +66,7 @@ export const data = [
     },
     {
         id: "soccer",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167518677923536956/soccer.gif",
+        image: "img/files/projects/soccer.gif",
         minecraft: true,
         social: [
         ],
@@ -81,7 +81,7 @@ export const data = [
     },
     {
         id: "planehunt",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167522284341305376/plane.gif",
+        image: "img/files/projects/plane.gif",
         minecraft: true,
         social: [
             {
@@ -100,7 +100,7 @@ export const data = [
     },
     {
         id: "geleiaphone",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167527453359624303/gphone.gif",
+        image: "img/files/projects/gphone.gif",
         minecraft: true,
         social: [
             {
@@ -119,7 +119,7 @@ export const data = [
     },
     {
         id: "customportals",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167537208677380157/portals.gif",
+        image: "img/files/projects/portals.gif",
         minecraft: true,
         social: [
         ],
@@ -132,7 +132,7 @@ export const data = [
     },
     {
         id: "fallguys",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167581798520324156/fallguys.gif",
+        image: "img/files/projects/fallguys.gif",
         minecraft: true,
         social: [
         ],
@@ -147,7 +147,7 @@ export const data = [
     },
     {
         id: "allayhunt",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167552003619180584/Allay.gif",
+        image: "img/files/projects/Allay.gif",
         minecraft: true,
         social: [
             {
@@ -166,7 +166,7 @@ export const data = [
     },
     {
         id: "golemhunt",
-        image: "https://media.discordapp.net/attachments/1071515485214089266/1167555099850195086/golem.gif",
+        image: "img/files/projects/golem.gif",
         minecraft: true,
         social: [
         ],
