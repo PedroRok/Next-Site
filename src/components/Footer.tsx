@@ -19,7 +19,7 @@ export default function Footer() {
 					<FooterButton link="https://discordapp.com/users/210534961843798016">
 						<DiscordIcon />
 					</FooterButton>
-					<FooterButton link="mailto:pedro@brpacks.net">
+					<FooterButton link="mailto:contato@pedrorok.com">
 						<EmailIcon />
 					</FooterButton>
 				</div>

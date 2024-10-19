@@ -80,7 +80,7 @@ export default function Home() {
 								white: (chunks) => <W>{chunks}</W>,
 								blue: (chunks) => <B dark={true}>{chunks}</B>,
 								waka: () => <L link="https://wakatime.com/@Rok" tooltip="Wakatime">{getTotalCoded() || "..."}</L>,
-								brpacks: () => <L link="https://dc.brpacks.net/">Brpacks</L>
+								job: () => <L link="https://www.linkedin.com/company/enxservices/">ENX Services</L>
 							})}
 						</h2>
 						<div className="mt-4">
