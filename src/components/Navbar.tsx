@@ -31,12 +31,13 @@ export default function Navbar() {
 
 	return (
 		<nav className="w-full max-w-[850px]">
-			<Tooltip id="default" defaultIsOpen isOpen={tooltip} disableStyleInjection place="left" arrowColor="#00d2ff88" style={{
+			<Tooltip id="default" defaultIsOpen isOpen={tooltip} disableStyleInjection place="bottom-end" arrowColor="#00d2ff88" style={{
 				backgroundColor: "#ffffff00",
 				backdropFilter: "blur(1rem)",
 				borderRadius: "0.5rem",
 				color: "#00d2ff",
 				zIndex: 1000,
+				margin: "22px 0px 0px 0px",
 				boxShadow: "0px 0px 5px #00d2ff",
 			}}/>
 			<nav className="flex items-center justify-between pt-3">
