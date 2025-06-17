@@ -65,6 +65,28 @@ export const data = [
         ]
     },
     {
+        id: "hypertube",
+        image: "https://i.imgur.com/UccmHvR.gif",
+        minecraft: true,
+        social: [
+            {
+                type: "github",
+                url: "https://github.com/PedroRok/CreateHypertubes"
+            },
+            {
+                type: "site",
+                url: "https://www.curseforge.com/minecraft/mc-mods/hypertubes"
+            }
+        ],
+        langs: [
+            "Java"
+        ],
+        libs: [
+            "Forge",
+            "Neoforge"
+        ]
+    },
+    {
         id: "soccer",
         image: "https://i.imgur.com/22OykhN.gif",
         minecraft: true,

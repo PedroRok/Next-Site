@@ -26,6 +26,10 @@
 				"title": "Process Scheduler",
 				"description": "Final project for the Operating Systems discipline, at UFES. Made in Java, with the aim of simulating process scheduling in an OS."
 			},
+			"hypertube": {
+				"title": "Hypertubes",
+				"description": "A mod that adds transport tubes in Minecraft, allowing players to move quickly between different points on the map."
+			},
 			"soccer": {
 				"title": "Soccer",
 				"description": "A super soccer minigame in vanilla Minecraft, using a ball with very dynamic physics and different ways to interact."

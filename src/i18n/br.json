@@ -26,6 +26,10 @@
 				"title": "Escalonamento de Processos",
 				"description": "Projeto para conclusão da matéria de Sistemas Operacionais, pela UFES. Feito em Java, com o objetivo de simular o escalonamento de processos em um SO."
 			},
+			"hypertube": {
+				"title": "Hypertubes",
+				"description": "Um mod que adiciona tubos de transporte no Minecraft, permitindo que os jogadores se movam rapidamente entre diferentes pontos do mapa."
+			},
 			"soccer": {
 				"title": "Futebol",
 				"description": "Um super minigame de futebol no Minecraft vanilla, utilizando uma bola com fisica muito dinâmica e formas diferentes de interagir."
