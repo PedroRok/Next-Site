@@ -7,6 +7,7 @@ import { languages } from "@/i18n/settings";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, AbstractIntlMessages, createTranslator } from "next-intl";
 import Head from "next/head";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,6 +78,7 @@ export default async function RootLayout({ children, params }: Props) {
 					{children}
 					<Footer />
 				</NextIntlClientProvider>
+			<SpeedInsights />
 			</body>
 		</html>
 	);
